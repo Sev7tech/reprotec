@@ -1,5 +1,3 @@
 export default function Home() {
-  return (
-    <h1 className="red text-sm font-sans">Reprotec</h1>
-  )
+  return <h1 className="font-sans text-sm">Reprotec</h1>
 }

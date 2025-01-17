@@ -1,4 +1,4 @@
-import type { NextConfig } from "next";
+import type { NextConfig } from 'next'
 
 const nextConfig: NextConfig = {
   productionBrowserSourceMaps: true,
@@ -8,6 +8,6 @@ const nextConfig: NextConfig = {
   images: {
     formats: ['image/webp', 'image/avif']
   }
-};
+}
 
-export default nextConfig;
+export default nextConfig
