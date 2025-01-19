@@ -22,7 +22,7 @@ const Banner = ({ children, src, alt }: BannerProps) => {
         }}
       />
       <div className="overlay absolute"></div>
-      <section className="max-container flexCenter z-10 text-center">
+      <section className="max-container flexCenter z-20 text-center">
         {children}
       </section>
     </section>
