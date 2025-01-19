@@ -1,6 +1,6 @@
 import Link from 'next/link'
 
-import Picture from './Pictures'
+import Picture from './Picture'
 
 type BrandProps = {
   src: string
