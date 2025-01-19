@@ -7,18 +7,20 @@ interface PictureProps {
   $w: number
   /** height as $h number type */
   $h: number
+  className?: string
 }
 
-const Picture = ({ src, alt, $w, $h }: PictureProps) => {
+const Picture = ({ src, alt, $w, $h, className }: PictureProps) => {
   return (
     <div
       style={{
         position: 'relative',
         width: '100%',
-        height: '100%',
+        height: 'auto',
         aspectRatio: `${$w} / ${$h}`,
         overflow: 'hidden'
       }}
+      className={className}
     >
       <Image
         src={src}
@@ -33,6 +35,7 @@ const Picture = ({ src, alt, $w, $h }: PictureProps) => {
           width: '100%',
           height: '100%'
         }}
+        role="img"
       />
     </div>
   )
