@@ -18,11 +18,11 @@ const CustomLink = ({
 }: ICustomLink) => {
   return (
     <Link
-      className={
+      className={`py-2 ${
         isFooterLink
           ? 'text-base font-normal text-slate-200 hover:brightness-100'
           : 'text-lg font-semibold text-black hover:text-sky-600'
-      }
+      } `}
       href={href}
       title={linkTitle}
       aria-label={linkTitle}
