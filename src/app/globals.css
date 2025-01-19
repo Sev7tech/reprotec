@@ -12,3 +12,25 @@ body {
   overflow-x: hidden;
   font-family: var(--font-barlow), sans-serif;
 }
+
+@layer utilities {
+  .max-container {
+    @apply container mx-auto max-w-screen-xl w-[95%];
+  }
+
+  .gap16 {
+    @apply flex flex-col gap-4;
+  }
+
+  .gap8 {
+    @apply flex flex-col gap-2;
+  }
+
+  .flexCenter {
+    @apply flex items-center justify-center;
+  }
+
+  .flexBetween {
+    @apply flex items-center justify-between;
+  }
+}
