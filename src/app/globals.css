@@ -15,7 +15,7 @@ body {
 
 @layer utilities {
   .max-container {
-    @apply container mx-auto max-w-screen-xl w-[95%];
+    @apply container mx-auto w-[95%] max-w-screen-xl;
   }
 
   .gap16 {
@@ -32,5 +32,13 @@ body {
 
   .flexBetween {
     @apply flex items-center justify-between;
+  }
+
+  .flexEnd {
+    @apply flex items-end justify-center;
+  }
+
+  .flexRow {
+    @apply flex flex-row;
   }
 }
