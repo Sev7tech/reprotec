@@ -58,7 +58,7 @@ const Footer = () => {
   return (
     <footer className="flex flex-col gap-6 bg-gray-900 py-8">
       <section className="max-container grid grid-cols-1 gap-8 md:grid-cols-2 md:justify-items-stretch md:gap-14 lg:grid-cols-4">
-        <section className="gap16">
+        <section className="gapCol16">
           <Brand src="/images/logo-white.png" />
           <Typography.Text className="text-sm text-slate-300">
             Na Reprotec, oferecemos serviços técnicos de reparo eficientes,
@@ -69,18 +69,18 @@ const Footer = () => {
           </Typography.Text>
         </section>
 
-        <section className="gap16">
+        <section className="gapCol16">
           <Typography.H3 className="text-slate-300">Links Úteis</Typography.H3>
           {linkList({ links: navigatorLinks })}
         </section>
 
-        <section className="gap16">
+        <section className="gapCol16">
           <Typography.H3 className="text-slate-300">
             Nossos Serviços
           </Typography.H3>
           {linkList({ links: servicesLinks })}
         </section>
-        <section className="gap16">
+        <section className="gapCol16">
           <Typography.H3 className="text-slate-300">Fale Conosco</Typography.H3>
           {henderContacts({ contacts: contactList })}
         </section>
@@ -89,7 +89,7 @@ const Footer = () => {
         <Typography.Text className="text-sm text-slate-300">
           &copy; {currentYear} Reprotec, todos os direitos reservados.
         </Typography.Text>
-        <ul className="gap16 md:flex md:flex-row">
+        <ul className="gapCol16 md:flex md:flex-row">
           {creditsLinks.map((link) => (
             <li key={link.id}>
               <Typography.Link
