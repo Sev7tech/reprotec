@@ -8,7 +8,7 @@ interface ICustomLink extends ITypographyBase {
   target?: string
   isFooterLink?: boolean
   onClick?: () => void
-  isHeader?: boolean
+  isTextWhite?: boolean
 }
 
 const CustomLink = ({
@@ -18,14 +18,14 @@ const CustomLink = ({
   target,
   isFooterLink,
   onClick,
-  isHeader
+  isTextWhite
 }: ICustomLink) => {
   return (
     <Link
       className={`py-2 ${
         isFooterLink
           ? 'text-base font-normal text-slate-200 hover:text-sky-600 hover:brightness-105'
-          : isHeader
+          : isTextWhite
             ? 'text-lg font-semibold text-white hover:text-sky-600'
             : 'text-lg font-semibold text-black hover:text-sky-600'
       } `}
