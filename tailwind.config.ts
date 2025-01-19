@@ -11,7 +11,7 @@ export default {
       colors: {
         deepBlue: '#061F31',
         primaryBlue: '#08376B',
-        midnightBlue: '#0B1953' 
+        midnightBlue: '#0B1953'
       }
     }
   },
