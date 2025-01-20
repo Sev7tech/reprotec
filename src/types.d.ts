@@ -14,4 +14,9 @@ interface ILink {
 
 interface IContact extends IImage, ILink {}
 
-export type { IImage, ILink, IContact }
+interface IServiceCard extends IImage, ILink {
+  cardTitle: string
+  text: string
+}
+
+export type { IImage, ILink, IContact, IServiceCard }
