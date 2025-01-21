@@ -29,4 +29,16 @@ interface IImagesCredits extends IImage {
   linkTitle2: string
 }
 
-export type { IImage, ILink, IContact, IServiceCard, IImagesCredits }
+interface IOurDifferentials extends IImage {
+  title: string
+  text: string
+}
+
+export type {
+  IImage,
+  ILink,
+  IContact,
+  IServiceCard,
+  IImagesCredits,
+  IOurDifferentials
+}
