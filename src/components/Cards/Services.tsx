@@ -19,8 +19,7 @@ const ServicesCard = ({
         <Typography.H3 className="text-white">{cardTitle}</Typography.H3>
         <Typography.Text className="text-white">{text}</Typography.Text>
         <Typography.Link href={href} linkTitle={title} isTextWhite>
-          entrar em contato{' '}
-          <span className="text-[1px] text-transparent">{children}</span>
+          entrar em contato <span className="text-for-seo">{children}</span>
         </Typography.Link>
       </div>
     </article>
