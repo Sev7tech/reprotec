@@ -57,7 +57,7 @@ const henderContacts = ({ contacts }: { contacts: IContact[] }) => {
 const Footer = () => {
   return (
     <footer className="flex flex-col gap-6 bg-gray-900 py-8">
-      <section className="max-container grid grid-cols-1 gap-8 md:grid-cols-2 md:justify-items-stretch md:gap-14 lg:grid-cols-4">
+      <section className="w-95 max-container grid grid-cols-1 gap-8 md:grid-cols-2 md:justify-items-stretch md:gap-14 lg:grid-cols-4">
         <section className="gapCol16">
           <Brand src="/images/logo-white.png" />
           <Typography.Text className="text-sm text-slate-300">
@@ -85,7 +85,7 @@ const Footer = () => {
           {henderContacts({ contacts: contactList })}
         </section>
       </section>
-      <section className="max-container flex flex-col-reverse gap-4 md:flex-row md:justify-between">
+      <section className="max-container w-95 flex flex-col-reverse gap-4 md:flex-row md:justify-between">
         <Typography.Text className="text-sm text-slate-300">
           &copy; {currentYear} Reprotec, todos os direitos reservados.
         </Typography.Text>
