@@ -1,6 +1,7 @@
 import { ReactNode } from 'react'
 
 interface IImage {
+  id?: number
   src: string
   alt: string
 }
@@ -19,4 +20,13 @@ interface IServiceCard extends IImage, ILink {
   text: string
 }
 
-export type { IImage, ILink, IContact, IServiceCard }
+interface IImagesCredits extends IImage {
+  link1: string
+  href1: string
+  linkTitle1: string
+  link2: string
+  href2: string
+  linkTitle2: string
+}
+
+export type { IImage, ILink, IContact, IServiceCard, IImagesCredits }
