@@ -18,7 +18,8 @@ const CustomLink = ({
   target,
   isFooterLink,
   onClick,
-  isTextWhite
+  isTextWhite,
+  className
 }: ICustomLink) => {
   return (
     <Link
@@ -28,7 +29,7 @@ const CustomLink = ({
           : isTextWhite
             ? 'text-lg font-semibold text-white hover:text-sky-600'
             : 'text-lg font-semibold text-black hover:text-sky-600'
-      } `}
+      } ${className}`}
       href={href}
       title={linkTitle}
       aria-label={linkTitle}
