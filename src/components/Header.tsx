@@ -15,7 +15,7 @@ const Header = memo(() => {
 
   return (
     <header className="fixed top-0 z-50 w-full bg-midnightBlue">
-      <div className="max-container flexBetween w-95 relative py-4 md:py-2">
+      <div className="max-container flexBetween w-95 relative md:py-2">
         <Brand src="/images/logo-white.png" />
         <nav
           className={`${menuOpen ? 'translate-x-0 bg-blue-950/90 opacity-100' : '-translate-x-full opacity-0 lg:translate-x-0 lg:opacity-100'} mainNav`}
