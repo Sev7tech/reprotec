@@ -1,7 +1,7 @@
 import { IContact, IImagesCredits, ILink } from '@/types'
 
 // images for the website
-const images = {
+export const images = {
   homeBanner: '/images/home-banner.jpg',
   homeBannerAlt: 'Casal feliz em casa, com eletrodomésticos funcionando bem',
 
@@ -35,7 +35,7 @@ const images = {
   aboutSection: '/images/about-section.jpg',
   aboutSectionAlt: 'Imagem de uma família feliz em casa',
 
-  callCenter: '/images/call-center.jpg',
+  callCenter: '/images/call-center.png',
   callCenterAlt: 'Imagem de um call center'
 }
 
