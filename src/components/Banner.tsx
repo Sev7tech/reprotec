@@ -9,7 +9,7 @@ export interface BannerProps extends IImage {
 
 const Banner = ({ children, src, alt }: BannerProps) => {
   return (
-    <section role="banner" className="banner flexCenter">
+    <section role="banner" className="banner flexCenter w-screen">
       <Image
         src={src}
         alt={alt}
@@ -22,7 +22,7 @@ const Banner = ({ children, src, alt }: BannerProps) => {
         }}
       />
       <div className="overlay absolute"></div>
-      <section className="max-container flexCenter z-20 text-center">
+      <section className="max-container flexCenter w-95 z-20 text-center">
         {children}
       </section>
     </section>
