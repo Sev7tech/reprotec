@@ -19,7 +19,7 @@ body {
   }
 
   .buttonBase {
-    @apply px-5 py-3 text-lg font-semibold text-white;
+    @apply px-5 py-2 text-lg font-semibold text-white;
   }
 
   .mainTitle {
@@ -35,7 +35,7 @@ body {
   }
 
   .servicesList {
-    @apply grid grid-cols-1 gap-14 lg:grid-cols-2
+    @apply grid grid-cols-1 gap-14 lg:grid-cols-2;
   }
 }
 
@@ -45,11 +45,11 @@ body {
   }
 
   .w-95 {
-    @apply w-[95%]
+    @apply w-[95%];
   }
 
   .custom-section {
-    @apply w-95  rounded-2xl bg-slate-100 py-14 shadow-xl;
+    @apply w-95 rounded-2xl bg-slate-100 py-14 shadow-xl;
   }
 
   .gapCol16 {
