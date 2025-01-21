@@ -27,7 +27,7 @@ const PageContainer = ({
   )
 
   return (
-    <main className="flexCenter mx-auto flex-col gap-32 pb-32 pt-16 md:pt-[72px]">
+    <main className="flexCenter mx-auto w-screen flex-col gap-32 pb-32 pt-16 md:pt-[72px]">
       <Banner src={bannerSrc} alt={bannerAlt}>
         {childrenBanner}
       </Banner>
