@@ -1,9 +1,12 @@
-import { IContact, IImagesCredits, ILink } from '@/types'
+import { IContact, IImagesCredits, ILink, IOurDifferentials } from '@/types'
 
 // images for the website
 export const images = {
   homeBanner: '/images/home-banner.jpg',
   homeBannerAlt: 'Casal feliz em casa, com eletrodomésticos funcionando bem',
+
+  aboutSection: '/images/about-section.jpg',
+  aboutSectionAlt: 'Imagem de uma família feliz em casa',
 
   geladeria: '/images/services/geladeira.jpg',
   geladeiraAlt: '',
@@ -32,11 +35,17 @@ export const images = {
   coifa: '/images/services/coifa.jpg',
   coifaAlt: '',
 
-  aboutSection: '/images/about-section.jpg',
-  aboutSectionAlt: 'Imagem de uma família feliz em casa',
-
   callCenter: '/images/call-center.png',
-  callCenterAlt: 'Imagem de um call center'
+  callCenterAlt: 'Imagem de um call center',
+
+  certificate: '/images/icons/certificate.svg',
+  certificateAlt: 'Ícone de certificado de qualidade',
+
+  house: '/images/icons/house.svg',
+  houseAlt: 'Ícone de casa | serviço a domicilio',
+
+  user: '/images/icons/users.svg',
+  userAlt: 'Ícone de usuário | profissionais qualificados'
 }
 
 export const navigatorLinks: ILink[] = [
@@ -174,6 +183,30 @@ export const contactList: IContact[] = [
     href: 'tel:+551124832924',
     title: 'Ligue para +55 11 2483-2924',
     children: '+55 11 2483-2924'
+  }
+]
+
+export const OurDifferentialsList: IOurDifferentials[] = [
+  {
+    id: 1,
+    src: images.certificate,
+    alt: images.certificateAlt,
+    title: 'Peças Originais',
+    text: 'Utilizamos peças originais de fábrica, assegurando qualidade e durabilidade no reparo de eletrodomésticos. Garantimos a melhor manutenção para seu aparelho.'
+  },
+  {
+    id: 2,
+    src: images.user,
+    alt: images.userAlt,
+    title: 'Equipe Qualificados',
+    text: 'Contamos com técnicos especializados que passam por treinamentos contínuos, garantindo reparos de alta qualidade e segurança para todos os eletrodomésticos.'
+  },
+  {
+    id: 3,
+    src: images.house,
+    alt: images.houseAlt,
+    title: 'Atendimento Domiciliar',
+    text: 'Atendemos residências e empresas em Guarulhos SP e região, oferecendo serviços de reparo e manutenção de eletrodomésticos com eficiência qualidade.'
   }
 ]
 
