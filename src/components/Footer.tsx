@@ -56,7 +56,7 @@ const henderContacts = ({ contacts }: { contacts: IContact[] }) => {
 
 const Footer = () => {
   return (
-    <footer className="flex flex-col gap-6 bg-gray-900 py-8">
+    <footer className="relative z-40 flex flex-col gap-6 bg-gray-900 py-8">
       <section className="w-95 max-container grid grid-cols-1 gap-8 md:grid-cols-2 md:justify-items-stretch md:gap-14 lg:grid-cols-4">
         <section className="gapCol16">
           <Brand src="/images/logo-white.png" />
