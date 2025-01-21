@@ -56,6 +56,10 @@ body {
     @apply flex flex-col gap-4;
   }
 
+  .gapCol24 {
+    @apply flex flex-col gap-6;
+  }
+
   .gap8 {
     @apply flex flex-col gap-2;
   }
@@ -82,5 +86,9 @@ body {
 
   .text-for-seo {
     @apply text-[1px] text-transparent;
+  }
+
+  .mainNav {
+    @apply fixed left-0 top-[64px] h-dvh w-full px-4 duration-300 lg:static lg:h-auto lg:w-auto lg:bg-transparent;
   }
 }
