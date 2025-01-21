@@ -24,7 +24,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt">
-      <body className={`${barlow.variable} antialiased`}>
+      <body className={`${barlow.variable} bg-gray-100 antialiased`}>
         <Header />
         {children}
         <Footer />
