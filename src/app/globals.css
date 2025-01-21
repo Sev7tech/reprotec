@@ -15,7 +15,7 @@ body {
 
 @layer components {
   .banner {
-    @apply flexCenter relative h-auto w-full flex-col px-4 py-10 lg:h-[calc(100vh-72px)] lg:py-0;
+    @apply flexCenter relative h-auto w-full flex-col py-10 lg:h-[calc(100vh-72px)] lg:py-0;
   }
 
   .buttonBase {
@@ -89,6 +89,6 @@ body {
   }
 
   .mainNav {
-    @apply fixed left-0 top-[64px] h-dvh w-full px-4 duration-300 lg:static lg:h-auto lg:w-auto lg:bg-transparent;
+    @apply fixed left-0 top-[64px] px-4 h-dvh w-full duration-300 lg:static lg:h-auto lg:w-auto lg:bg-transparent;
   }
 }
