@@ -93,7 +93,7 @@ export const servicesLinks: ILink[] = [
   },
   {
     id: 4,
-    children: 'Fogão',
+    children: 'Fogão & Cooktop',
     href: '/servicos',
     title: 'Conheça nosso serviço de reparo e manutenção de fogões'
   },
@@ -123,12 +123,6 @@ export const servicesLinks: ILink[] = [
   },
   {
     id: 9,
-    children: 'Cooktop',
-    href: '/servicos',
-    title: 'Conheça nosso serviço de reparo e manutenção de cooktops'
-  },
-  {
-    id: 10,
     children: 'Coifa',
     href: '/servicos',
     title: 'Conheça nosso serviço de reparo e manutenção de coifas'
