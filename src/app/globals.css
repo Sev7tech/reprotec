@@ -79,4 +79,8 @@ body {
   .overlay {
     @apply inset-0 z-10 bg-black/75;
   }
+
+  .text-for-seo {
+    @apply text-[1px] text-transparent;
+  }
 }
