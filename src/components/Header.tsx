@@ -14,30 +14,34 @@ const Header = memo(() => {
   const toggleMenu = () => setMenuOpen(!menuOpen)
 
   return (
-    <header className="fixed top-0 z-[1001] w-full bg-midnightBlue">
-      <div className="max-container flexBetween relative py-4">
+    <header className="fixed top-0 z-50 w-full bg-midnightBlue">
+      <div className="max-container flexBetween w-95 relative md:py-2">
         <Brand src="/images/logo-white.png" />
         <nav
-          className={`${menuOpen ? 'translate-x-0 bg-black/90 opacity-100' : '-translate-x-full opacity-0 lg:translate-x-0 lg:lg:opacity-100'} fixed left-0 top-[64px] h-dvh w-full px-4 lg:static lg:h-auto lg:w-auto lg:bg-transparent`}
+          className={`${menuOpen ? 'translate-x-0 bg-blue-950/90 opacity-100' : '-translate-x-full opacity-0 lg:translate-x-0 lg:opacity-100'} mainNav`}
           role="navigation"
           aria-label={'mainNavigation'}
         >
-          <ul className="gap16 lg:flexRow pt-4 lg:space-x-4 lg:p-0">
+          <ul className="gapCol24 lg:flexRow items-center pt-4 lg:space-x-4 lg:p-0">
             {navigatorLinks.map((link) => (
               <li key={link.id}>
                 <Typography.Link
                   href={link.href}
                   linkTitle={link.title}
                   onClick={() => toggleMenu()}
-                  isHeader
+                  isTextWhite
                 >
                   {link.children}
                 </Typography.Link>
               </li>
             ))}
+            <li className="mt-16 md:hidden">
+              <Buttons.CallCenter isMobile />
+            </li>
           </ul>
         </nav>
         <div className="flexBetween gap-4">
+          <Buttons.CallCenter isMobile={false} />
           <Buttons.ToggleMenu
             onClick={() => toggleMenu()}
             isMenuOpen={menuOpen}
