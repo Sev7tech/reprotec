@@ -37,6 +37,7 @@ const validationSchema = Yup.object({
 
 const WorkForm = memo(() => {
   const [isPopupVisible, setIsPopupVisible] = useState(false)
+  const [isSubmitError, setISsubmitError] = useState(false)
 
   return (
     <>
@@ -69,7 +70,10 @@ const WorkForm = memo(() => {
               setSubmitting(false)
               setIsPopupVisible(true)
             })
-            .catch((error) => alert(`Error ao enviar o formulário ${error}`))
+            .catch(() => {
+              setISsubmitError(true)
+              setIsPopupVisible(true)
+            })
             .finally(() => {
               resetForm()
               setSubmitting(false)
@@ -184,7 +188,9 @@ const WorkForm = memo(() => {
           </form>
         )}
       </Formik>
-      {isPopupVisible && <Popups isContactForm={false} />}
+      {isPopupVisible && (
+        <Popups isContactForm={false} isError={isSubmitError} />
+      )}
     </>
   )
 })
