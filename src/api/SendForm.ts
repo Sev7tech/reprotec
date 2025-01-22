@@ -27,7 +27,7 @@ async function sendForm({ subject, text, html }: ISendForm) {
 
     return info
   } catch (error) {
-    throw new Error(`${error}`)
+    return alert(error)
   } finally {
     transporter.close()
   }
