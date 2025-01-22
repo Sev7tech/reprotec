@@ -19,15 +19,11 @@ body {
   }
 
   .buttonBase {
-    @apply px-5 py-2 text-lg font-semibold text-white;
+    @apply rounded-3xl px-5 py-2 text-lg font-semibold text-white;
   }
 
   .mainTitle {
     @apply text-4xl font-extrabold text-white md:text-5xl;
-  }
-
-  .blueTitle {
-    @apply;
   }
 
   .secondaryTitle {
@@ -36,6 +32,14 @@ body {
 
   .servicesList {
     @apply grid grid-cols-1 gap-14 lg:grid-cols-2;
+  }
+
+  .smallTitle {
+    @apply text-2xl font-semibold text-black;
+  }
+
+  .SubmitButton {
+    @apply buttonBase mt-4 bg-primaryBlue hover:brightness-125;
   }
 }
 
@@ -60,7 +64,7 @@ body {
     @apply flex flex-col gap-6;
   }
 
-  .gap8 {
+  .gapCol8 {
     @apply flex flex-col gap-2;
   }
 
@@ -81,7 +85,7 @@ body {
   }
 
   .overlay {
-    @apply inset-0 z-10 bg-black/75;
+    @apply inset-0 bg-black/75;
   }
 
   .text-for-seo {
@@ -89,6 +93,30 @@ body {
   }
 
   .mainNav {
-    @apply fixed left-0 top-[64px] px-4 h-dvh w-full duration-300 lg:static lg:h-auto lg:w-auto lg:bg-transparent;
+    @apply fixed left-0 top-[64px] h-dvh w-full px-4 duration-300 lg:static lg:h-auto lg:w-auto lg:bg-transparent;
+  }
+
+  .input-focus {
+    @apply focus:outline-2 focus:outline-green-600;
+  }
+
+  .input-error {
+    @apply outline outline-2 outline-red-600;
+  }
+
+  .message-error {
+    @apply text-nowrap text-xs font-normal text-red-600;
+  }
+
+  .input-style {
+    @apply input-focus rounded-3xl bg-gray-50 px-4 py-2 text-base font-medium text-black;
+  }
+
+  .popup {
+    @apply w-95 gapCol8 relative left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 transform rounded-lg bg-white p-6 shadow-lg md:max-w-[600px];
+  }
+
+  .close-popup {
+    @apply absolute right-2 top-0 p-2 text-xl font-semibold text-black cursor-pointer;
   }
 }
