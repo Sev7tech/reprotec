@@ -21,7 +21,7 @@ const Banner = ({ children, src, alt }: BannerProps) => {
           objectFit: 'cover'
         }}
       />
-      <div className="overlay absolute"></div>
+      <div className="overlay absolute z-10"></div>
       <section className="max-container flexCenter w-95 z-20 text-center">
         {children}
       </section>

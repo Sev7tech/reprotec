@@ -9,7 +9,7 @@ export const WhatsApp = () => {
     <Link
       href={`https://wa.me/${'phoneNumber'}?text=${encodeURIComponent('message')}`}
       title={buttonTitle}
-      className="fixed bottom-4 right-4 z-30 h-12 w-12 rounded-full bg-emerald-500 p-2 md:h-14 md:w-14"
+      className="fixed bottom-4 right-4 z-30 h-12 w-12 rounded-full bg-emerald-500 p-2"
       target="_blank"
     >
       <Picture

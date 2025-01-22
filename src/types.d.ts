@@ -34,11 +34,18 @@ interface IOurDifferentials extends IImage {
   text: string
 }
 
+interface ISendForm {
+  subject: string
+  text: string
+  html: string
+}
+
 export type {
   IImage,
   ILink,
   IContact,
   IServiceCard,
   IImagesCredits,
-  IOurDifferentials
+  IOurDifferentials,
+  ISendForm
 }

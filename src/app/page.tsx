@@ -1,6 +1,9 @@
+import Link from 'next/link'
+
 import { Buttons } from '@/components/Buttons'
 import { Cards } from '@/components/Cards'
 import { Containers } from '@/components/Container'
+import ContactFrom from '@/components/Form/ContactForm'
 import Picture from '@/components/Picture'
 import { Typography } from '@/components/Typography'
 import { images, OurDifferentialsList } from '@/constants'
@@ -124,20 +127,23 @@ export default function Home() {
       </Containers.Wrapper>
 
       <Containers.Wrapper>
-        <div>
-          <Typography.BlueTitle>Porque nos escolher?</Typography.BlueTitle>
-          <h3 className="secondaryTitle">Nossos Diferencial</h3>
+        <div className="gapCol16">
+          <div>
+            <Typography.BlueTitle>Porque nos escolher?</Typography.BlueTitle>
+            <h3 className="secondaryTitle">Nossos Diferencial</h3>
+          </div>
+          <Typography.Text>
+            Se você busca uma assistência técnica de confiança para seus
+            eletrodomésticos em Guarulhos e região, a Reprotec é a escolha
+            ideal. Como assistência técnica autorizada de marcas renomadas, como
+            Midea, Carrier, Springer, Toshiba e outras, oferecemos reparos
+            especializados com peças originais e profissionais altamente
+            qualificados. Com foco em serviços rápidos e eficientes, garantimos
+            que seus eletrodomésticos funcionem perfeitamente, trazendo de volta
+            a praticidade e segurança para o seu dia a dia.
+          </Typography.Text>{' '}
         </div>
-        <Typography.Text>
-          Se você busca uma assistência técnica de confiança para seus
-          eletrodomésticos em Guarulhos e região, a Reprotec é a escolha ideal.
-          Como assistência técnica autorizada de marcas renomadas, como Midea,
-          Carrier, Springer, Toshiba e outras, oferecemos reparos especializados
-          com peças originais e profissionais altamente qualificados. Com foco
-          em serviços rápidos e eficientes, garantimos que seus eletrodomésticos
-          funcionem perfeitamente, trazendo de volta a praticidade e segurança
-          para o seu dia a dia.
-        </Typography.Text>{' '}
+
         <ul className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:mt-14 lg:grid-cols-3">
           {OurDifferentialsList.map((items) => (
             <li
@@ -157,11 +163,64 @@ export default function Home() {
       </Containers.Wrapper>
 
       <Containers.Wrapper>
-        <div className="gapCol16">
-          <Typography.BlueTitle>Entre em Contato Conosco</Typography.BlueTitle>
-          <h3 className="secondaryTitle">
-            Agende a visita com um dos nossos especialistas
-          </h3>
+        <div className="gapCol8 lg:flex-row lg:gap-14">
+          <div className="gapCol16 mb-14 lg:mb-0 lg:gap-8">
+            <div>
+              <Typography.BlueTitle>
+                Entre em Contato Conosco
+              </Typography.BlueTitle>
+              <h3 className="secondaryTitle">
+                Agende a visita com um dos nossos especialistas
+              </h3>
+            </div>
+
+            <div className="flex gap-4">
+              <div className="h-[80px] w-[80px] overflow-hidden rounded-full">
+                <Picture
+                  src={images.callCenter}
+                  alt={images.callCenterAlt}
+                  $w={56}
+                  $h={56}
+                />
+              </div>
+
+              <div className="flex flex-col">
+                <h4 className="smallTitle">Tem uma pergunta?</h4>
+                <Link
+                  href={'contact'}
+                  title="Entre em contato com o atendimento Reprotec"
+                  target="_blank"
+                  className="text-base font-medium"
+                >
+                  +55 11 2483-2924
+                </Link>
+              </div>
+            </div>
+
+            <div>
+              <h4 className="smallTitle">Horario de atendimento</h4>
+              <p className="font-medium">Segunda a Sexta: 08:00h - 18:00h</p>
+            </div>
+
+            <div>
+              <h4 className="smallTitle">
+                Reprotec-Assistência Técnica Autorizada
+              </h4>
+              <Link
+                href={'mapa'}
+                title="Veja no mapa"
+                className="text-base font-medium"
+                target="_blank"
+              >
+                Avenida Venturosa, 111 - Jd. Cumbica - Guarulhos - cep:
+                07240-000
+              </Link>
+            </div>
+          </div>
+
+          <div className="w-full md:mx-auto md:w-[90%] lg:w-[70%]">
+            <ContactFrom />
+          </div>
         </div>
       </Containers.Wrapper>
     </Containers.PageContainer>
