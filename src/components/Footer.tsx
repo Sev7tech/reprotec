@@ -20,7 +20,7 @@ const linkList = ({
   className?: string
 }) => {
   return (
-    <ul className={className ? className : 'gap8'}>
+    <ul className={className ? className : 'gapCol8'}>
       {links.map((link) => (
         <li key={link.id}>
           <Typography.Link href={link.href} linkTitle={link.title} isFooterLink>
@@ -34,7 +34,7 @@ const linkList = ({
 
 const henderContacts = ({ contacts }: { contacts: IContact[] }) => {
   return (
-    <ul className="gap8">
+    <ul className="gapCol8">
       {contacts.map((contact) => (
         <li className="flex flex-1 items-center gap-2" key={contact.id}>
           <div className="w-7">
