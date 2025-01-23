@@ -4,6 +4,7 @@ import { Barlow } from 'next/font/google'
 import './globals.css'
 import Footer from '@/components/Footer'
 import Header from '@/components/Header'
+import { Buttons } from '@/components/Buttons'
 
 const barlow = Barlow({
   subsets: ['latin'],
@@ -24,9 +25,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt">
-      <body className={`${barlow.variable} antialiased`}>
+      <body className={`${barlow.variable} bg-gray-100 antialiased`}>
         <Header />
         {children}
+        <Buttons.WhatsApp />
         <Footer />
       </body>
     </html>
