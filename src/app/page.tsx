@@ -38,7 +38,7 @@ export default function Home() {
           <Typography.BlueTitle>Nossos Serviços</Typography.BlueTitle>
           <h3 className="secondaryTitle">Explore Nossos Serviços</h3>
         </div>
-        <div className="gapCol16 w-full lg:px-56 lg:text-center">
+        <div className="gapCol24 lg:px-56 lg:text-center">
           <div className="lg:px-56">
             <Picture
               src={images.businessPartners}
