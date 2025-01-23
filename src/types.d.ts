@@ -40,6 +40,12 @@ interface ISendForm {
   html: string
 }
 
+interface IPageInfos {
+  title: string
+  children: ReactNode
+  href: string
+}
+
 export type {
   IImage,
   ILink,
@@ -47,5 +53,6 @@ export type {
   IServiceCard,
   IImagesCredits,
   IOurDifferentials,
-  ISendForm
+  ISendForm,
+  IPageInfos
 }
