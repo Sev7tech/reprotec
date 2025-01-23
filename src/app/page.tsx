@@ -6,7 +6,9 @@ import { Containers } from '@/components/Container'
 import ContactFrom from '@/components/Form/ContactForm'
 import Picture from '@/components/Picture'
 import { Typography } from '@/components/Typography'
-import { images, OurDifferentialsList } from '@/constants'
+import { images, OurDifferentialsList, servicesCardList } from '@/constants'
+
+const servicesList = servicesCardList.filter((_, index) => index <= 5)
 
 export default function Home() {
   return (
@@ -36,43 +38,31 @@ export default function Home() {
           <Typography.BlueTitle>Nossos Serviços</Typography.BlueTitle>
           <h3 className="secondaryTitle">Explore Nossos Serviços</h3>
         </div>
+        <div className="gapCol16 w-full lg:px-56 lg:text-center">
+          <div className="lg:px-56">
+            <Picture
+              src={images.businessPartners}
+              alt={images.businessPartnersAlt}
+              $w={75}
+              $h={6}
+            />
+          </div>
+          <Typography.Text>
+            Somos autorizados das marcas Medea, Carrier, Springer, Comfee e
+            TOSHIBA. Com a confiança dessas grandes marcas, garantimos que
+            nossos serviços de manutenção e reparo sejam realizados com peças
+            originais e profissionais capacitados garantindo a mais alta
+            qualidade. Conte com a experiência e a credibilidade de marcas
+            líderes para garantir o funcionamento perfeito dos seus
+            equipamentos.
+          </Typography.Text>
+        </div>
         <ul className="servicesList">
-          <li>
-            <Cards.ServicesCard
-              cardTitle="Serviço de Reparos"
-              text="Oferecemos reparos de qualidade para seus eletrodomésticos. Oferecemos reparos de qualidade para seus eletrodomésticos. Oferecemos reparos de qualidade para seus eletrodomésticos. Oferecemos reparos de qualidade para seus eletrodomésticos. Oferecemos reparos de qualidade para seus eletrodomésticos. Oferecemos reparos de qualidade para seus eletrodomésticos. Oferecemos reparos de qualidade para seus eletrodomésticos. Oferecemos reparos de qualidade para seus eletrodomésticos."
-              src="/images/home-banner.jpg"
-              alt="Imagem de serviço de reparo"
-              href="/"
-              title="link"
-            >
-              Link
-            </Cards.ServicesCard>
-          </li>
-          <li>
-            <Cards.ServicesCard
-              cardTitle="Serviço de Reparos"
-              text="Oferecemos reparos de qualidade para seus eletrodomésticos. Oferecemos reparos de qualidade para seus eletrodomésticos. Oferecemos reparos de qualidade para seus eletrodomésticos. Oferecemos reparos de qualidade para seus eletrodomésticos. Oferecemos reparos de qualidade para seus eletrodomésticos. Oferecemos reparos de qualidade para seus eletrodomésticos. Oferecemos reparos de qualidade para seus eletrodomésticos. Oferecemos reparos de qualidade para seus eletrodomésticos."
-              src="/images/home-banner.jpg"
-              alt="Imagem de serviço de reparo"
-              href="/"
-              title="link"
-            >
-              Link
-            </Cards.ServicesCard>
-          </li>
-          <li>
-            <Cards.ServicesCard
-              cardTitle="Serviço de Reparos"
-              text="Oferecemos reparos de qualidade para seus eletrodomésticos. Oferecemos reparos de qualidade para seus eletrodomésticos. Oferecemos reparos de qualidade para seus eletrodomésticos. Oferecemos reparos de qualidade para seus eletrodomésticos. Oferecemos reparos de qualidade para seus eletrodomésticos. Oferecemos reparos de qualidade para seus eletrodomésticos. Oferecemos reparos de qualidade para seus eletrodomésticos. Oferecemos reparos de qualidade para seus eletrodomésticos."
-              src="/images/home-banner.jpg"
-              alt="Imagem de serviço de reparo"
-              href="/"
-              title="link"
-            >
-              Link
-            </Cards.ServicesCard>
-          </li>
+          {servicesList.map((items) => (
+            <li key={items.id}>
+              <Cards.ServicesCard {...items} />
+            </li>
+          ))}
         </ul>
         <div className="flexCenter">
           <Buttons.CTA2 />
