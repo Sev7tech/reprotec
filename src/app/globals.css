@@ -117,6 +117,6 @@ body {
   }
 
   .close-popup {
-    @apply absolute right-2 top-0 p-2 text-xl font-semibold text-black cursor-pointer;
+    @apply absolute right-2 top-0 cursor-pointer p-2 text-xl font-semibold text-black;
   }
 }
