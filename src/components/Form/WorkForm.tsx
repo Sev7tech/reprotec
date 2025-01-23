@@ -9,6 +9,8 @@ import { Typography } from '../Typography'
 import { Buttons } from '../Buttons'
 import Popups from '../Popup'
 
+import sendForm from '@/utils/form.utils'
+
 const validationSchema = Yup.object({
   firstName: Yup.string()
     .min(2, 'O nome deve ter no mínimo 2 caracteres.')
@@ -50,31 +52,23 @@ const WorkForm = memo(() => {
         }}
         validationSchema={validationSchema}
         onSubmit={(values, { setSubmitting, resetForm }) => {
-          const formData = {
-            firsName: values.firstName,
-            lastName: values.lastName,
-            whatsapp: values.whatsapp,
-            email: values.email,
-            file: values.file
-          }
-
-          fetch('/api/workForm', {
-            method: 'POST',
-            headers: {
-              'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(formData)
+          sendForm({
+            subject: 'Candidatura Recebida - Site Reprotec',
+            text: `Olá, equipe Reprotec! \n
+          Recebemos uma nova candidatura de emprego no site. Seguem os dados: \n`,
+            html: `<p><strong>Nome: </strong>${values.firstName}</p>
+      <p><strong>Sobrenome: </strong>${values.lastName}</p>
+      <p><strong>Link do WhatsApp: </strong> <a href="https://wa.me/55${values.whatsapp}">Click aqui para conversar no WhatsApp</a></p>
+      <p><strong>Telefone: </strong>+55 ${values.whatsapp}</p>
+      <p><strong>E-mail: </strong>${values.email}</p>
+      <p><strong>currículo: </strong>${values.file}</p>
+      <p>Atenciosamente,</p>
+      <p>Equipe Reprotec.</p>`
           })
-            .then((response) => response.json())
-            .then((data) => {
-              if (data.success) {
-                resetForm()
-                setSubmitting(false)
-                setIsPopupVisible(true)
-              } else {
-                setISsubmitError(true)
-                setIsPopupVisible(true)
-              }
+            .then(() => {
+              resetForm()
+              setSubmitting(false)
+              setIsPopupVisible(true)
             })
             .catch(() => {
               setISsubmitError(true)
@@ -89,8 +83,8 @@ const WorkForm = memo(() => {
         {({ handleSubmit, values, isSubmitting }) => (
           <form
             onSubmit={handleSubmit}
-            className="gapCol8 w-full rounded-2xl bg-primaryBlue/10 p-4"
             method="POST"
+            className="gapCol8 w-full rounded-2xl bg-primaryBlue/10 p-4"
           >
             <FormElement.InputGroup>
               <FormElement.Label htmlFor="firstName">
