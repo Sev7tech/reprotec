@@ -4,6 +4,7 @@ import { Containers } from '@/components/Container'
 import WorkForm from '@/components/Form/WorkForm'
 import { Typography } from '@/components/Typography'
 import { IPageInfos } from '@/types'
+import { images } from '@/constants'
 
 const pageInfos: IPageInfos = {
   title: 'Trabalhe conosco',
@@ -14,13 +15,13 @@ const pageInfos: IPageInfos = {
 const WorkWithUs = () => {
   return (
     <Containers.PageContainer
-      bannerSrc="/images/about-section.jpg"
-      bannerAlt="Banner"
+      bannerSrc={images.banner}
+      bannerAlt={images.bannerAlt}
       pageInfos={pageInfos}
     >
       <Containers.Wrapper>
-        <div className="flex flex-col-reverse gap-14 lg:flex-row">
-          <div className="w-full md:mx-auto md:w-[90%] lg:w-[70%]">
+        <div className="form-pages">
+          <div className="form-container">
             <WorkForm />
           </div>
           <div className="gapCol16 lg:w-[70%]">

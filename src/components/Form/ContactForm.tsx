@@ -9,7 +9,7 @@ import { Typography } from '../Typography'
 import { Buttons } from '../Buttons'
 import Popup from '../Popup'
 
-import sendForm from '@/api/SendForm'
+import sendForm from '@/utils/form.utils'
 
 const validationSchema = Yup.object({
   firstName: Yup.string()
@@ -81,6 +81,7 @@ const ContactForm = memo(() => {
         {({ handleSubmit, isSubmitting }) => (
           <form
             onSubmit={handleSubmit}
+            method="POST"
             className="gapCol8 w-full rounded-2xl bg-primaryBlue/10 p-4"
           >
             <FormElement.InputGroup>

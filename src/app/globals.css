@@ -119,4 +119,12 @@ body {
   .close-popup {
     @apply absolute right-2 top-0 cursor-pointer p-2 text-xl font-semibold text-black;
   }
+
+  .form-pages {
+    @apply flex flex-col-reverse gap-16 lg:flex-row;
+  }
+
+  .form-container {
+    @apply w-full md:mx-auto md:w-[90%] lg:w-[70%];
+  }
 }
