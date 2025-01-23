@@ -19,8 +19,8 @@ const WorkWithUs = () => {
       pageInfos={pageInfos}
     >
       <Containers.Wrapper>
-        <div className="flex flex-col-reverse gap-14 lg:flex-row">
-          <div className="w-full md:mx-auto md:w-[90%] lg:w-[70%]">
+        <div className="form-pages">
+          <div className="form-container">
             <WorkForm />
           </div>
           <div className="gapCol16 lg:w-[70%]">
