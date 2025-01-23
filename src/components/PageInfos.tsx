@@ -1,13 +1,6 @@
-import { ReactNode } from 'react'
-
-import Picture from './Picture'
 import { Typography } from './Typography'
 
-export interface IPageInfos {
-  title: string
-  children: ReactNode
-  href: string
-}
+import { IPageInfos } from '@/types'
 
 const PageInfos = ({ title, children, href }: IPageInfos) => {
   return (
@@ -25,12 +18,7 @@ const PageInfos = ({ title, children, href }: IPageInfos) => {
           </Typography.Link>
         </li>
         <li className="w-4">
-          <Picture
-            src="images/icons/arrow-direction.svg"
-            alt={`navegar para a pagina ${children}`}
-            $w={16}
-            $h={16}
-          />
+          <span className="text-lg font-medium text-white">/</span>
         </li>
         <li>
           <Typography.Link
