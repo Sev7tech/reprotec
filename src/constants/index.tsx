@@ -73,7 +73,7 @@ export const navigatorLinks: ILink[] = [
   {
     id: 2,
     children: 'Serviços',
-    href: '/serviços',
+    href: '/servicos',
     title: 'Ir para a página de serviços'
   },
   {
@@ -85,7 +85,7 @@ export const navigatorLinks: ILink[] = [
   {
     id: 4,
     children: 'Contato',
-    href: '/',
+    href: '/contato',
     title: 'Ir para a página de contato'
   }
 ]
