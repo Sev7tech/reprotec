@@ -1,4 +1,10 @@
-import { IContact, IImagesCredits, ILink, IOurDifferentials } from '@/types'
+import {
+  IContact,
+  IImagesCredits,
+  ILink,
+  IOurDifferentials,
+  IServiceCard
+} from '@/types'
 
 // images for the website
 export const images = {
@@ -9,31 +15,31 @@ export const images = {
   aboutSectionAlt: 'Imagem de uma família feliz em casa',
 
   geladeria: '/images/services/geladeira.jpg',
-  geladeiraAlt: '',
+  geladeiraAlt: 'Manutenção de geladeira',
 
   microondas: '/images/services/microondas.jpg',
-  microondasAlt: '',
+  microondasAlt: 'Manutenção de micro-ondas',
 
-  maquinaLavar: '/images/services/maquina-lavar.jpeg',
-  maquinaLavarAlt: '',
+  maquinaLavar: '/images/services/maquina-lavar.jpg',
+  maquinaLavarAlt: 'Manutenção de máquina de lavar',
 
-  fogao: '/images/services/fogao.jpeg',
-  fogaoAlt: '',
+  fogao: '/images/services/fogao.jpg',
+  fogaoAlt: 'Manutenção de fogão',
 
-  arcondicionado: '/images/services/arcondicionado.jpeg',
-  arcondicionadoAlt: '',
+  arcondicionado: '/images/services/arcondicionado.jpg',
+  arcondicionadoAlt: 'Manutenção de ar condicionado',
 
   fornoEletrico: '/images/services/fono-eletrico.jpg',
-  fornoEletricoAlt: '',
+  fornoEletricoAlt: 'Manutenção de forno elétrico',
 
-  freezer: '/images/services/freezer.jpg',
-  freezerAlt: '',
+  freezer: '/images/services/freezer.webp',
+  freezerAlt: 'Manutenção de freezer',
 
-  adega: '/images/services/',
-  adegaAlt: '',
+  adega: '/images/services/adega.webp',
+  adegaAlt: 'Manutenção de adega',
 
   coifa: '/images/services/coifa.jpg',
-  coifaAlt: '',
+  coifaAlt: 'Manutenção de coifa',
 
   callCenter: '/images/call-center.png',
   callCenterAlt: 'Imagem de um call center',
@@ -45,7 +51,10 @@ export const images = {
   houseAlt: 'Ícone de casa | serviço a domicilio',
 
   user: '/images/icons/users.svg',
-  userAlt: 'Ícone de usuário | profissionais qualificados'
+  userAlt: 'Ícone de usuário | profissionais qualificados',
+
+  businessPartners: '/images/parceiros.png',
+  businessPartnersAlt: 'Imagem de parceiros comerciais'
 }
 
 export const navigatorLinks: ILink[] = [
@@ -55,26 +64,26 @@ export const navigatorLinks: ILink[] = [
     href: '/',
     title: 'Ir para a página home'
   },
+  // {
+  //   id: 2,
+  //   children: 'Sobre nós',
+  //   href: '/sobre-nos',
+  //   title: 'Ir para a página Sobre nós'
+  // },
   {
     id: 2,
-    children: 'Sobre nós',
-    href: '/sobre-nos',
-    title: 'Ir para a página Sobre nós'
-  },
-  {
-    id: 3,
     children: 'Serviços',
     href: '/serviços',
     title: 'Ir para a página de serviços'
   },
   {
-    id: 4,
+    id: 3,
     children: 'Trabalhe conosco',
     href: '/trabalhe-conosco',
     title: 'Ir para a página de trabalhe conosco'
   },
   {
-    id: 5,
+    id: 4,
     children: 'Contato',
     href: '/',
     title: 'Ir para a página de contato'
@@ -207,6 +216,99 @@ export const OurDifferentialsList: IOurDifferentials[] = [
     alt: images.houseAlt,
     title: 'Atendimento Domiciliar',
     text: 'Atendemos residências e empresas em Guarulhos SP e região, oferecendo serviços de reparo e manutenção de eletrodomésticos com eficiência qualidade.'
+  }
+]
+
+export const servicesCardList: IServiceCard[] = [
+  {
+    id: 1,
+    src: images.geladeria,
+    alt: images.geladeiraAlt,
+    cardTitle: 'Geladeira',
+    text: 'A Reprotec oferece manutenção e conserto de geladeiras com técnicos especializados. Realizamos serviços como troca de gás refrigerante, reparos no motor e solução de vazamentos, utilizando peças original, para garantir o funcionamento perfeito do seu equipamento. Confie em quem entende de refrigeração!',
+    children: 'Geladeira',
+    href: '/contact',
+    title: 'Entre em contato para serviço de geladeira'
+  },
+  {
+    id: 2,
+    src: images.microondas,
+    alt: images.microondasAlt,
+    cardTitle: 'Micro-ondas',
+    text: ' Na Reprotec, realizamos reparos e manutenção de micro-ondas com eficiência e rapidez. Nossa equipe especializada atua em problemas como falhas no aquecimento, defeitos no painel digital e troca de componentes. Garantimos qualidade e segurança no conserto do seu aparelho. Agende agora mesmo!',
+    children: 'Micro-ondas',
+    href: '/contact',
+    title: 'Entre em contato para serviço de micro-ondas'
+  },
+  {
+    id: 3,
+    src: images.maquinaLavar,
+    alt: images.maquinaLavarAlt,
+    cardTitle: 'Máquina de Lavar',
+    text: 'Somos referência em manutenção e conserto de máquinas de lavar roupas. Solucionamos vazamentos, problemas no motor e defeitos em painéis eletrônicos das principais marcas do mercado. Com atendimento rápido e peças original, devolvemos a funcionalidade ao seu eletrodoméstico.',
+    children: 'Máquina de Lavar',
+    href: '/contact',
+    title: 'Entre em contato para serviço de máquina de lavar'
+  },
+  {
+    id: 4,
+    src: images.fogao,
+    alt: images.fogaoAlt,
+    cardTitle: 'Fogão & Cooktop',
+    text: 'A Reprotec é especialista em reparos de fogões e cooktops, oferecendo serviços como conserto de queimadores, ajustes de válvulas e troca de ignitores. Atendemos modelos a gás ou elétricos com rapidez e segurança, garantindo uma cozinha em pleno funcionamento.',
+    children: 'Fogão & Cooktop',
+    href: '/contact',
+    title: 'Entre em contato para serviço de fogão e cooktop'
+  },
+  {
+    id: 5,
+    src: images.arcondicionado,
+    alt: images.arcondicionadoAlt,
+    cardTitle: 'Ar Condicionado',
+    text: 'Oferecemos manutenção e conserto de ar-condicionado para ambientes residenciais e comerciais. Trabalhamos com recarga de gás, limpeza, reparos técnicos e substituição de peças, assegurando máxima eficiência e conforto térmico. Entre em contato para atendimento especializado!',
+    children: 'Ar Condicionado',
+    href: '/contact',
+    title: 'Entre em contato para serviço de ar condicionado'
+  },
+  {
+    id: 6,
+    src: images.fornoEletrico,
+    alt: images.fornoEletricoAlt,
+    cardTitle: 'Forno Elétrico',
+    text: 'A Reprotec é especializada em reparos de fornos elétricos, oferecendo soluções para problemas como aquecimento insuficiente, defeitos no termostato e falhas no painel eletrônico. Trabalhamos com agilidade e utilizamos peças originais para garantir o melhor desempenho e durabilidade do seu forno. Confie na nossa expertise para manter seu forno em perfeito funcionamento!',
+    children: 'Forno Elétrico',
+    href: '/contact',
+    title: 'Entre em contato para serviço de forno elétrico'
+  },
+  {
+    id: 7,
+    src: images.freezer,
+    alt: images.freezerAlt,
+    cardTitle: 'Freezer',
+    text: 'A Reprotec oferece manutenção e conserto de freezers para modelos verticais e horizontais. Realizamos reparos no compressor, solução de vazamentos e ajustes no sistema de refrigeração, sempre utilizando peças originais. Garantimos o desempenho ideal do seu freezer, mantendo seus alimentos sempre conservados. Agende já!',
+    children: 'Freezer',
+    href: '/contact',
+    title: 'Entre em contato para serviço de freezer'
+  },
+  {
+    id: 8,
+    src: images.adega,
+    alt: images.adegaAlt,
+    cardTitle: 'Adega',
+    text: 'A Reprotec é especialista em manutenção de adegas climatizadas. Realizamos reparos em sistemas de refrigeração, falhas no termostato e ajustes técnicos, garantindo que seus vinhos fiquem na temperatura ideal. Conte com nossa experiência para preservar a qualidade e conservação dos seus vinhos. Agende agora!',
+    children: 'Adega',
+    href: '/contact',
+    title: 'Entre em contato para serviço de adega'
+  },
+  {
+    id: 9,
+    src: images.coifa,
+    alt: images.coifaAlt,
+    cardTitle: 'Coifa',
+    text: 'A Reprotec é especializada em manutenção e conserto de coifas. Realizamos reparos em motores, filtros e ventilação, garantindo a eficiência do exaustor. Atendemos modelos residenciais e comerciais, mantendo sua cozinha livre de fumaça e odores. Agende agora!',
+    children: 'Coifa',
+    href: '/contact',
+    title: 'Entre em contato para serviço de coifa'
   }
 ]
 
