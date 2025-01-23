@@ -16,8 +16,8 @@ const pageInfos: IPageInfos = {
 const Contact = () => {
   return (
     <Containers.PageContainer
-      bannerSrc="/images/about-section.jpg"
-      bannerAlt="Banner"
+      bannerSrc={images.banner}
+      bannerAlt={images.bannerAlt}
       pageInfos={pageInfos}
     >
       <Containers.Wrapper>

@@ -4,6 +4,7 @@ import { Containers } from '@/components/Container'
 import WorkForm from '@/components/Form/WorkForm'
 import { Typography } from '@/components/Typography'
 import { IPageInfos } from '@/types'
+import { images } from '@/constants'
 
 const pageInfos: IPageInfos = {
   title: 'Trabalhe conosco',
@@ -14,8 +15,8 @@ const pageInfos: IPageInfos = {
 const WorkWithUs = () => {
   return (
     <Containers.PageContainer
-      bannerSrc="/images/about-section.jpg"
-      bannerAlt="Banner"
+      bannerSrc={images.banner}
+      bannerAlt={images.bannerAlt}
       pageInfos={pageInfos}
     >
       <Containers.Wrapper>

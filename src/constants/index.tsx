@@ -54,7 +54,10 @@ export const images = {
   userAlt: 'Ícone de usuário | profissionais qualificados',
 
   businessPartners: '/images/parceiros.png',
-  businessPartnersAlt: 'Imagem de parceiros comerciais'
+  businessPartnersAlt: 'Imagem de parceiros comerciais',
+
+  banner: '/images/banner.jpg',
+  bannerAlt: 'Pessoas em confraternização em uma casa aconchegante'
 }
 
 export const navigatorLinks: ILink[] = [

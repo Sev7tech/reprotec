@@ -16,8 +16,8 @@ const Services = () => {
   return (
     <Containers.PageContainer
       isPageInfos
-      bannerSrc="/images/about-section.jpg"
-      bannerAlt="Banner Image"
+      bannerSrc={images.banner}
+      bannerAlt={images.bannerAlt}
       pageInfos={pageInfos}
     >
       <Containers.Wrapper>
