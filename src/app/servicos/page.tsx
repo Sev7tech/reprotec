@@ -6,7 +6,7 @@ import { Typography } from '@/components/Typography'
 import { images, servicesCardList } from '@/constants'
 import { IPageInfos } from '@/types'
 
-const infosPage: IPageInfos = {
+const pageInfos: IPageInfos = {
   title: 'Serviços',
   children: 'Serviços',
   href: '/servicos'
@@ -18,7 +18,7 @@ const Services = () => {
       isPageInfos
       bannerSrc="/images/about-section.jpg"
       bannerAlt="Banner Image"
-      pageInfos={infosPage}
+      pageInfos={pageInfos}
     >
       <Containers.Wrapper>
         <div className="gapCol24">
