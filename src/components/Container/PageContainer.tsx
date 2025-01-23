@@ -1,11 +1,13 @@
 import { ReactNode } from 'react'
 
-import PageInfos, { IPageInfos } from '../PageInfos'
+import PageInfos from '../PageInfos'
 import Banner from '../Banner'
 
+import { IPageInfos } from '@/types'
+
 interface IPageContainer {
-  isPageInfos: boolean
-  bannerChildren: ReactNode
+  isPageInfos?: boolean
+  bannerChildren?: ReactNode
   bannerSrc: string
   bannerAlt: string
   children: ReactNode
