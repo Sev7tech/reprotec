@@ -38,7 +38,7 @@ jobs:
           retention-days: 30
 
   Build-and-Deploy:
-    needs: Test
+    needs: test
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
