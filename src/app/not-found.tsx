@@ -28,7 +28,7 @@ const NotFound = () => {
           <div className="text-center">
             <Link
               href="/"
-              title="Voltar para a página  home"
+              title="Voltar para a página home"
               aria-label="Voltar para página home"
               className="buttonBase bg-sky-200 text-xl font-semibold text-zinc-800"
             >

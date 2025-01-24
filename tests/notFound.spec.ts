@@ -20,9 +20,7 @@ test.describe('Tests for the Not Found page', () => {
   })
 
   test('Should have a button to go to home', async ({ page }) => {
-    const selector = page.getByRole('link', {
-      name: 'Voltar para a página inicial'
-    })
+    const selector = page.getByRole('link', { name: 'Voltar para página home' })
 
     await selector.click()
 
