@@ -65,7 +65,11 @@ export const images = {
 
   // image banner credits page
   creditos: '/images/creditos.jpg',
-  creditosAlt: 'Créditos & Agradecimentos a quem fez esse se tornar realidade'
+  creditosAlt: 'Créditos & Agradecimentos a quem fez esse se tornar realidade',
+
+  // Not Found page
+  notFound: '/images/not-found.svg',
+  notFoundAlt: 'Pagina não encontrada'
 }
 
 export const navigatorLinks: ILink[] = [
@@ -332,7 +336,7 @@ export const imagesCredits: IImagesCredits[] = [
     href1:
       'https://www.freepik.com/free-photo/joyful-couple-dancing-singing-breakfast-kitchen-wearing-pajamas-carefree-wife-husband-laughing-having-fun-funny-enjoying-life-authentic-married-people-positive-happy-relation_18065596.htm#fromView=image_search_similar&page=4&position=31&uuid=493235c9-da66-499d-a93d-bcae19ba6c32&query=Cozinha+mobiliada+com+familia+feliz',
     link1: 'DC Studio',
-    linkTitle1: 'Ver outras imagem do DC Studio',
+    linkTitle1: 'Ver outras imagens de DC Studio',
     href2: 'https://www.freepik.com/',
     link2: 'Freepik',
     linkTitle2: 'Banco de imagem Freepik'
@@ -344,7 +348,7 @@ export const imagesCredits: IImagesCredits[] = [
     href1:
       'https://www.freepik.com/free-photo/woman-red-holding-foul-food_1246413.htm#from_view=detail_alsolike',
     link1: 'Bearfotos',
-    linkTitle1: 'Ver outras imagem do Bearfotos',
+    linkTitle1: 'Ver outras imagens de Bearfotos',
     href2: 'https://www.freepik.com/',
     link2: 'Freepik',
     linkTitle2: 'Banco de imagem Freepik'
@@ -356,7 +360,7 @@ export const imagesCredits: IImagesCredits[] = [
     href1:
       'https://www.freepik.com/free-photo/casual-girl-using-microwave-heat-cup_1868083.htm#fromView=search&page=1&position=3&uuid=4ebaa063-8277-42c3-a562-966173ce4689&query=microondas+midea',
     link1: 'Freepik',
-    linkTitle1: 'Ver outras imagem do Freepik',
+    linkTitle1: 'Ver outras imagens de Freepik',
     href2: 'https://www.freepik.com/',
     link2: 'Freepik',
     linkTitle2: 'Branco de imagem Freepik'
@@ -368,7 +372,7 @@ export const imagesCredits: IImagesCredits[] = [
     href1:
       'https://www.freepik.com/free-photo/side-view-man-working-as-plumber_64644843.htm#fromView=image_search_similar&page=1&position=7&uuid=9967ed68-48ba-4379-a453-2353c82edab7&query=M%C3%A1quina+de+Lavar+quebrada',
     link1: 'Freepik',
-    linkTitle1: 'Ver outras imagem do Freepik',
+    linkTitle1: 'Ver outras imagens de Freepik',
     href2: 'https://www.freepik.com/',
     link2: 'Freepik',
     linkTitle2: 'Banco de imagem Freepik'
@@ -380,7 +384,7 @@ export const imagesCredits: IImagesCredits[] = [
     href1:
       'https://www.freepik.com/free-photo/side-view-young-woman-tasting-soup-from-ladle-kitchen_3579186.htm#fromView=search&page=1&position=23&uuid=4eec2330-b077-45c2-9ae8-ece5f8f5ef74&query=cozinhando+no+fog%C3%A3o',
     link1: 'Freepik',
-    linkTitle1: 'Ver outras imagem do Freepik',
+    linkTitle1: 'Ver outras imagens de Freepik',
     href2: 'https://www.freepik.com/',
     link2: 'Freepik',
     linkTitle2: 'Banco de imagem Freepik'
@@ -392,7 +396,7 @@ export const imagesCredits: IImagesCredits[] = [
     href1:
       'https://www.freepik.com/free-photo/young-man-woman-sitting-table-working-laptop-co-working-office_6891589.htm#fromView=search&page=5&position=4&uuid=fd65b5aa-c93f-4ecc-b79c-1003851401df&query=Air+Conditioning',
     link1: 'Teksomolika',
-    linkTitle1: 'Ver outras imagem do Teksomolika',
+    linkTitle1: 'Ver outras imagens de Teksomolika',
     href2: 'https://www.freepik.com/',
     link2: 'Freepik',
     linkTitle2: 'Banco de imagem Freepik'
@@ -404,7 +408,7 @@ export const imagesCredits: IImagesCredits[] = [
     href1:
       'https://www.freepik.com/free-photo/man-putting-raw-salmon-steak-into-oven_2975996.htm#fromView=search&page=1&position=15&uuid=01051630-0768-40ae-8fb4-5b658577af16&query=forno+el%C3%A9trico',
     link1: 'Rawpixel.com',
-    linkTitle1: 'Ver outras imagem do Rawpixel.com',
+    linkTitle1: 'Ver outras imagens de Rawpixel.com',
     href2: 'https://www.freepik.com/',
     link2: 'Freepik',
     linkTitle2: 'Banco de imagem Freepik'
@@ -440,7 +444,7 @@ export const imagesCredits: IImagesCredits[] = [
     href1:
       'https://www.freepik.com/free-photo/empty-modern-room-with-furniture_20521185.htm#fromView=search&page=2&position=26&uuid=5ea95af5-a11e-4323-87d7-479748ea85d6&query=coifa',
     link1: 'Freepik',
-    linkTitle1: 'Ver outras imagem do Freepik',
+    linkTitle1: 'Ver outras imagens de Freepik',
     href2: 'https://www.freepik.com/',
     link2: 'Freepik',
     linkTitle2: 'Banco de imagem Freepik'
@@ -452,7 +456,7 @@ export const imagesCredits: IImagesCredits[] = [
     href1:
       'https://www.freepik.com/free-photo/group-friends-preparing-meal-kitchen_13853143.htm#fromView=search&page=3&position=16&uuid=82a409de-65f0-460d-b4b3-3685275914b8&query=familia+em+confraterniza%C3%A7%C3%A3o+na+cozinha+mobiliada',
     link1: 'Freepik',
-    linkTitle1: 'Ver outras imagem do Freepik',
+    linkTitle1: 'Ver outras imagens de Freepik',
     href2: 'https://www.freepik.com/',
     link2: 'Freepik',
     linkTitle2: 'Banco de imagem Freepik'
@@ -464,7 +468,7 @@ export const imagesCredits: IImagesCredits[] = [
     href1:
       'https://www.freepik.com/free-ai-image/young-woman-telemarketer-agent-corporate-operator-concept_122457096.htm#fromView=image_search_similar&page=1&position=2&uuid=38f448a9-90d4-4b11-b28e-ddc78fe064bb&query=cal+center',
     link1: 'Kues1',
-    linkTitle1: 'Ver outras imagem do Kues1',
+    linkTitle1: 'Ver outras imagens de Kues1',
     href2: 'https://www.freepik.com/',
     link2: 'Freepik',
     linkTitle2: 'Banco de imagem Freepik'
@@ -476,7 +480,7 @@ export const imagesCredits: IImagesCredits[] = [
     href1:
       'https://www.freepik.com/free-photo/psychological-therapy-support-group-meeting_94938709.htm#fromView=search&page=1&position=19&uuid=f4e9cb2a-2431-449e-896c-cc31c065af99&query=uni%C3%A3o',
     link1: 'Freepik',
-    linkTitle1: 'Ver outras imagem do Freepik',
+    linkTitle1: 'Ver outras imagens de Freepik',
     href2: 'https://www.freepik.com/',
     link2: 'Freepik',
     linkTitle2: 'Banco de imagem Freepik'
@@ -488,7 +492,19 @@ export const imagesCredits: IImagesCredits[] = [
     href1:
       'https://www.freepik.com/free-photo/senior-friends-having-wonderful-time-together_22377157.htm',
     link1: 'Freepik',
-    linkTitle1: 'Ver outras imagem do Freepik',
+    linkTitle1: 'Ver outras imagens de Freepik',
+    href2: 'https://www.freepik.com/',
+    link2: 'Freepik',
+    linkTitle2: 'Banco de imagem Freepik'
+  },
+  {
+    id: 15,
+    src: images.notFound,
+    alt: images.notFoundAlt,
+    href1:
+      'https://www.freepik.com/free-vector/repair-household-appliances-abstract-concept-illustration_11668717.htm#fromView=image_search_similar&page=1&position=0&uuid=df33a791-1f47-44ae-983a-dea5168eeb3d&query=t%C3%A9cnico+fazendo+manuten%C3%A7%C3%A3o+',
+    link1: 'Vectorjuice',
+    linkTitle1: 'Ver outras imagens de Vectorjuice',
     href2: 'https://www.freepik.com/',
     link2: 'Freepik',
     linkTitle2: 'Banco de imagem Freepik'
