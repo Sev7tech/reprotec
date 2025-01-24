@@ -41,6 +41,10 @@ body {
   .SubmitButton {
     @apply buttonBase mt-4 bg-primaryBlue hover:brightness-125;
   }
+
+  .creditsTitle {
+    @apply text-4xl font-semibold text-black;
+  }
 }
 
 @layer utilities {
@@ -126,5 +130,9 @@ body {
 
   .form-container {
     @apply w-full md:mx-auto md:w-[90%] lg:w-[70%];
+  }
+
+  .container-flex {
+    @apply block md:flex md:items-center md:gap-2;
   }
 }
