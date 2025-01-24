@@ -11,7 +11,7 @@ const PageInfos = ({ title, children, href }: IPageInfos) => {
         <li>
           <Typography.Link
             href="/"
-            linkTitle="Ir para a página home"
+            linkTitle="Ir para a página Home"
             isTextWhite
           >
             Home

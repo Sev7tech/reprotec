@@ -27,6 +27,7 @@ const Picture = ({ src, alt, $w, $h, className }: PictureProps) => {
         alt={alt}
         aria-label={alt}
         fill
+        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
         quality={70}
         loading="eager"
         style={{
