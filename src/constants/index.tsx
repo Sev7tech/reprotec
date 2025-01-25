@@ -1,3 +1,4 @@
+import { CONFIG } from '@/config'
 import {
   IContact,
   IImagesCredits,
@@ -188,7 +189,7 @@ export const contactList: IContact[] = [
     id: 1,
     src: '/images/icons/map-point.svg',
     alt: 'Ícone de localização',
-    href: 'https://www.google.com/maps?q=Avenida+Venturosa,+111+-+Jd.+Cumbica+-+Guarulhos+-+07240-000',
+    href: CONFIG.contact.address,
     title: 'Veja nossa localização no mapa',
     children: 'Ver endereço no map'
   },
@@ -196,17 +197,17 @@ export const contactList: IContact[] = [
     id: 2,
     src: '/images/icons/email.svg',
     alt: 'Ícone de email',
-    href: 'mailto:atendimento@reprotec.com.br',
+    href: CONFIG.contact.email.URL,
     title: 'Envie um e-mail para atendimento@reprotec.com.br',
-    children: 'atendimento@reprotec.com.br'
+    children: CONFIG.contact.email.children
   },
   {
     id: 3,
     src: '/images/icons/phone.svg',
     alt: 'Ícone de telefone',
-    href: 'tel:+551124832924',
+    href: CONFIG.contact.phone.URL,
     title: 'Ligue para +55 11 2483-2924',
-    children: '+55 11 2483-2924'
+    children: CONFIG.contact.phone.children
   }
 ]
 

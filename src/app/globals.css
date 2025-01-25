@@ -19,11 +19,11 @@ body {
   }
 
   .buttonBase {
-    @apply rounded-3xl px-5 py-2 text-lg font-semibold text-white;
+    @apply rounded-3xl px-5 py-3 text-lg font-semibold text-white duration-300;
   }
 
   .mainTitle {
-    @apply text-4xl font-extrabold text-white md:text-5xl;
+    @apply text-4xl font-extrabold text-white md:text-6xl;
   }
 
   .secondaryTitle {
@@ -142,5 +142,9 @@ body {
 
   .sub-title-privacy-policy {
     @apply text-2xl font-bold text-black;
+  }
+
+  .text-highline {
+    @apply text-green-500;
   }
 }

@@ -2,12 +2,14 @@ import Link from 'next/link'
 
 import Picture from '../Picture'
 
+import { CONFIG } from '@/config'
+
 export const WhatsApp = () => {
   const buttonTitle = 'Entrar em contato pelo WhatApp'
 
   return (
     <Link
-      href={`https://wa.me/${'phoneNumber'}?text=${encodeURIComponent('message')}`}
+      href={CONFIG.contact.phone.URL}
       title={buttonTitle}
       className="fixed bottom-4 right-4 z-30 h-12 w-12 rounded-full bg-emerald-500 p-2"
       target="_blank"
