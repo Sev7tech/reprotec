@@ -1,7 +1,11 @@
 import { expect, test } from '@playwright/test'
 
 test.describe('Tests for the Not Found page', () => {
-  test.beforeEach(async ({ page }) => {
+  test.beforeEach(async ({ page, context }) => {
+    await context.addInitScript(() => {
+      localStorage.setItem('cookieAccepted', 'yes')
+    })
+
     await page.goto('/not-found')
   })
 
