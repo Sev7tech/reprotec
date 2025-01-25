@@ -171,7 +171,7 @@ export const creditsLinks: ILink[] = [
   },
   {
     id: 2,
-    children: 'Privacidade',
+    children: 'Politica de Privacidade',
     href: '/politica-privacidade',
     title: 'Leia nossa política de privacidade'
   },

@@ -135,4 +135,12 @@ body {
   .container-flex {
     @apply block md:flex md:items-center md:gap-2;
   }
+
+  .list-privacy-policy {
+    @apply ml-10 flex list-disc flex-col gap-2;
+  }
+
+  .sub-title-privacy-policy {
+    @apply text-2xl font-bold text-black;
+  }
 }
