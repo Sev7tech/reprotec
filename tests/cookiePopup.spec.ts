@@ -11,9 +11,15 @@ test('Should have visible CookiePopup', async ({ page }) => {
     'Usamos cookies para melhorar sua experiência. Ao continuar navegando, você concorda com nossa Política de Privacidade.Eu aceito'
   )
 
+  const cookiePopupLink = cookiePopup.getByRole('link', {
+    name: 'Voce deve está em Consentimento com os cookie do website'
+  })
+
+  await expect(cookiePopupLink).toHaveAttribute('href', '/politica-privacidade')
+
+  await cookiePopupLink.click()
+
   await expect(
-    cookiePopup.getByRole('link', {
-      name: 'Voce deve está em Consentimento com os cookie do website'
-    })
-  ).toHaveAttribute('href', '/politica-de-privacidade')
+    page.getByRole('heading', { name: 'Política de Privacidade' })
+  ).toBeVisible()
 })

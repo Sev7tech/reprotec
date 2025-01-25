@@ -27,7 +27,7 @@ const CookiePopup = () => {
           Usamos cookies para melhorar sua experiência. Ao continuar navegando,
           você concorda com nossa{' '}
           <Typography.Link
-            href="/politica-de-privacidade"
+            href="/politica-privacidade"
             linkTitle="Voce deve está em Consentimento com os cookie do website"
             className="underline"
           >
