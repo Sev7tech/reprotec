@@ -1,6 +1,7 @@
 import Picture from '../Picture'
 import { Typography } from '../Typography'
 
+import { CONFIG } from '@/config'
 import { images } from '@/constants'
 
 type CallCenterProps = {
@@ -9,10 +10,11 @@ type CallCenterProps = {
 
 export const CallCenter = ({ isMobile = true }: CallCenterProps) => (
   <Typography.Link
-    href="/"
+    href={CONFIG.contact.phone.URL}
     linkTitle="Falar com um atendente Reprotec"
     className={`${isMobile ? 'flexCenter bg-cyan-500 md:hidden' : 'md:flexCenter hidden'} gap-2 rounded-3xl p-2 duration-300 hover:bg-cyan-500 hover:text-white`}
     isTextWhite
+    target="_blank"
   >
     <div
       style={{

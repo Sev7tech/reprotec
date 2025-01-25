@@ -6,6 +6,7 @@ import Footer from '@/components/Footer'
 import Header from '@/components/Header'
 import { Buttons } from '@/components/Buttons'
 import CookiePopup from '@/components/CookiePopup'
+import { CONFIG } from '@/config'
 
 const barlow = Barlow({
   subsets: ['latin'],
@@ -30,7 +31,7 @@ export const metadata: Metadata = {
   ],
   robots: 'index, follow',
   icons: {
-    icon: '/favicon.ico'
+    icon: CONFIG.ui.icon
   },
 
   openGraph: {
@@ -45,7 +46,7 @@ export const metadata: Metadata = {
     type: 'website',
     images: [
       {
-        url: '/assets/imagens/reprotec-logo.png',
+        url: CONFIG.ui.image,
         width: 1200,
         height: 630,
         alt: 'Reprotec - Logo'
@@ -58,7 +59,7 @@ export const metadata: Metadata = {
     title: '%s | Reprotec',
     description:
       'Reprotec oferece serviços de reparo de eletrodomésticos, como conserto de geladeiras, fogões, lavadoras, entre outros, em Guarulhos, São Paulo.',
-    images: '/assets/imagens/reprotec-logo.png',
+    images: CONFIG.ui.image,
     site: '@reprotec',
     creator: '@yourtwitterhandle'
   }
