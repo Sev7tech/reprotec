@@ -151,7 +151,11 @@ test.describe('Test for Privacy Policy page', () => {
     }
   ]
 
-  test.beforeEach(async ({ page }) => {
+  test.beforeEach(async ({ page, context }) => {
+    await context.addInitScript(() => {
+      localStorage.setItem('cookieAccepted', 'yes')
+    })
+
     await page.goto('/politica-privacidade')
   })
 
