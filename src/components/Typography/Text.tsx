@@ -7,7 +7,7 @@ interface IText extends ITypographyBase {
 const Text = ({ children, className }: IText) => {
   return (
     <p
-      className={`text-lg font-medium ${className ? className : 'text-black'}`}
+      className={`text-lg font-normal ${className ? className : 'text-black'}`}
     >
       {children}
     </p>
