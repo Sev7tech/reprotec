@@ -1,10 +1,31 @@
 import Link from 'next/link'
+import { Metadata } from 'next'
 
 import { Containers } from '@/components/Container'
 import WorkForm from '@/components/Form/WorkForm'
 import { Typography } from '@/components/Typography'
 import { IPageInfos } from '@/types'
 import { images } from '@/constants'
+
+export const metadata: Metadata = {
+  title: 'Trabalhe Conosco',
+  description:
+    'Junte-se à nossa equipe! Veja as vagas abertas e faça parte da Reprotec, empresa especializada em em Guarulhos e São Paulo.',
+  keywords:
+    'trabalhe conosco, empregos, vagas, eletrônicos, conserto de eletrodomésticos, Guarulhos, São Paulo',
+
+  openGraph: {
+    title: 'Trabalhe Conosco',
+    description:
+      'A Reprotec está com vagas abertas. Junte-se à nossa equipe de especialistas em reparo de eletrodomésticos!',
+    url: 'https://reprotec.com.br/trabalhe-conosco'
+  },
+  twitter: {
+    title: 'Trabalhe Conosco',
+    description:
+      'Junte-se à Reprotec e faça parte da nossa equipe de reparo de eletrodomésticos em Guarulhos e São Paulo.'
+  }
+}
 
 const pageInfos: IPageInfos = {
   title: 'Trabalhe conosco',

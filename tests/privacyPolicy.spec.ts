@@ -159,6 +159,10 @@ test.describe('Test for Privacy Policy page', () => {
     await page.goto('/politica-privacidade')
   })
 
+  test('Should have title', async ({ page }) => {
+    await expect(page).toHaveTitle(/Política de Privacidade | Reprotec/)
+  })
+
   titles.forEach((item) => {
     test(`Should have title ${item.title} - ${item.id}`, async ({ page }) => {
       await expect(

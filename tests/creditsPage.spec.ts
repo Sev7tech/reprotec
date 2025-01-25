@@ -43,11 +43,9 @@ test.describe('Tests for Credit page', () => {
     await page.goto('/creditos')
   })
 
-  // test('has title', async ({ page }) => {
-  //   await page.goto('https://playwright.dev/')
-
-  //   await expect(page).toHaveTitle(/Playwright/)
-  // })
+  test('Should have title', async ({ page }) => {
+    await expect(page).toHaveTitle(/Créditos | Reprotec/)
+  })
 
   bannerTests.forEach((item) => {
     test(`Link banner Should navigate to the correct page - id ${item.id}`, async ({

@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import { Metadata } from 'next'
 
 import { Containers } from '@/components/Container'
 import ContactForm from '@/components/Form/ContactForm'
@@ -6,6 +7,25 @@ import Picture from '@/components/Picture'
 import { images } from '@/constants'
 import { IPageInfos } from '@/types'
 import { Typography } from '@/components/Typography'
+
+export const metadata: Metadata = {
+  title: 'Contato',
+  description:
+    'Entre em contato com a Reprotec para mais informações sobre reparos de eletrodomésticos em Guarulhos e São Paulo. Estamos prontos para ajudar!',
+  keywords:
+    'contato, reparo de eletrodomésticos, atendimento, Guarulhos, São Paulo, assistência técnica',
+  openGraph: {
+    title: 'Contato',
+    description:
+      'Entre em contato com a Reprotec e saiba como podemos ajudar no conserto de seus eletrodomésticos em Guarulhos e São Paulo.',
+    url: 'https://reprotec.com.br/contato'
+  },
+  twitter: {
+    title: 'Contato',
+    description:
+      'Entre em contato com a Reprotec para mais informações sobre reparos de eletrodomésticos.'
+  }
+}
 
 const pageInfos: IPageInfos = {
   title: 'Entre em contato conosco',

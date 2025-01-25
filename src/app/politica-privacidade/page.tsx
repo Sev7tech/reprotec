@@ -1,5 +1,26 @@
+import { Metadata } from 'next'
+
 import { Containers } from '@/components/Container'
 import { Typography } from '@/components/Typography'
+
+export const metadata: Metadata = {
+  title: 'Política de Privacidade',
+  description:
+    'Entenda como protegemos os seus dados pessoais e como utilizamos cookies em nosso site. A Reprotec valoriza a sua privacidade.',
+  keywords:
+    'política de privacidade, proteção de dados, cookies, LGPD, Reprotec, Guarulhos, São Paulo',
+  openGraph: {
+    title: 'Política de Privacidade',
+    description:
+      'Saiba como a Reprotec protege a privacidade de seus usuários e os dados coletados em nosso site.',
+    url: 'https://reprotec.com.br/politica-privacidade'
+  },
+  twitter: {
+    title: 'Política de Privacidade',
+    description:
+      'Entenda a política de privacidade da Reprotec e como seus dados são protegidos.'
+  }
+}
 
 const PoliticaPrivacidade = () => {
   return (

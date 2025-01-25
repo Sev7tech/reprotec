@@ -1,3 +1,5 @@
+import { Metadata } from 'next'
+
 import { Buttons } from '@/components/Buttons'
 import { Cards } from '@/components/Cards'
 import { Containers } from '@/components/Container'
@@ -5,6 +7,25 @@ import Picture from '@/components/Picture'
 import { Typography } from '@/components/Typography'
 import { images, servicesCardList } from '@/constants'
 import { IPageInfos } from '@/types'
+
+export const metadata: Metadata = {
+  title: 'Serviços',
+  description:
+    'Conheça nossos serviços especializados em reparos e manutenção de eletrodomésticos em Guarulhos e Grande São Paulo. Qualidade garantida e rapidez nos consertos.',
+  keywords:
+    'reparo de eletrodomésticos, conserto de eletrodomésticos, manutenção, assistência técnica, Guarulhos, São Paulo',
+  openGraph: {
+    title: 'Serviços',
+    description:
+      'Oferecemos serviços rápidos e eficazes para conserto de eletrodomésticos, com garantia de qualidade em Guarulhos e São Paulo.',
+    url: 'https://reprotec.com.br/servicos'
+  },
+  twitter: {
+    title: 'Serviços',
+    description:
+      'Conheça os serviços da Reprotec para conserto de eletrodomésticos em Guarulhos e São Paulo.'
+  }
+}
 
 const pageInfos: IPageInfos = {
   title: 'Serviços',
