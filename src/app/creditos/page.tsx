@@ -1,8 +1,28 @@
+import { Metadata } from 'next'
+
 import { Cards } from '@/components/Cards'
 import { Containers } from '@/components/Container'
 import { Typography } from '@/components/Typography'
 import { images, imagesCredits, libraryList } from '@/constants'
 import { IPageInfos } from '@/types'
+
+export const metadata: Metadata = {
+  title: 'Créditos',
+  description:
+    'Agradecemos a todos os nossos parceiros e colaboradores que contribuem para o sucesso da Reprotec.',
+  keywords:
+    'créditos, agradecimentos, parceiros, colaboradores, Reprotec, Guarulhos, São Paulo',
+  openGraph: {
+    title: 'Créditos',
+    description:
+      'Agradecimentos aos parceiros e colaboradores que fazem a Reprotec ser o que é hoje.',
+    url: 'https://reprotec.com.br/creditos'
+  },
+  twitter: {
+    title: 'Créditos',
+    description: 'Agradecimentos aos parceiros e colaboradores da Reprotec.'
+  }
+}
 
 const pageInfos: IPageInfos = {
   title: 'Créditos & Agradecimentos',
