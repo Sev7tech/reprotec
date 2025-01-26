@@ -10,12 +10,12 @@ const CookiePopup = () => {
   useEffect(() => {
     const cookieAccepted = localStorage.getItem('cookieAccepted')
 
-    if (!cookieAccepted) setPopupVisible(true)
+    setPopupVisible(!cookieAccepted || new Date(cookieAccepted) <= new Date())
   }, [])
 
   const handleAccept = () => {
     const expirationData = new Date()
-    expirationData.setDate(expirationData.getDate() + 360)
+    expirationData.setFullYear(expirationData.getFullYear() + 1)
 
     localStorage.setItem('cookieAccepted', expirationData.toISOString())
     setPopupVisible(false)
