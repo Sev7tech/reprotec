@@ -12,7 +12,10 @@ type ContactInfoProp = {
 const ContactInformation = ({ isCallCenter = true }: ContactInfoProp) => {
   return (
     <section className="gapCol16">
-      <div className={isCallCenter ? 'flex gap-8' : 'hidden'}>
+      <div
+        className={isCallCenter ? 'flex gap-8' : 'hidden'}
+        data-aos="fade-up"
+      >
         <div className="h-[80px] w-[80px] overflow-hidden rounded-full">
           <Picture
             src={images.callCenter}
@@ -34,13 +37,15 @@ const ContactInformation = ({ isCallCenter = true }: ContactInfoProp) => {
           </Link>
         </div>
       </div>
-      <div>
+
+      <div data-aos="fade-up">
         <h4 className="smallTitle">Horario de atendimento</h4>
         <p className="contact-information-text">
           Segunda a Sexta: 08:00h - 18:00h
         </p>
       </div>
-      <div>
+
+      <div data-aos="fade-up">
         <h4 className="smallTitle">Reprotec-Assistência Técnica Autorizada</h4>
         <Link
           href={CONFIG.contact.address}

@@ -10,7 +10,7 @@ const NotFound = () => {
     <main className="py-32">
       <Containers.Wrapper>
         <div className="gapCol24 mx-auto max-w-[800px]">
-          <h1 className="text-2xl font-bold md:text-4xl">
+          <h1 className="text-2xl font-bold text-black md:text-4xl">
             Opa! Parece que essa página precisa de um manutenção. 😅
           </h1>
           <div className="max-w-[600px]">

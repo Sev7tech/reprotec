@@ -1,16 +1,22 @@
 import Picture from '../Picture'
 import { Typography } from '../Typography'
 
+import { getDelay } from '@/utils/animation.utils'
 import { IOurDifferentials } from '@/types'
 
 export const OurDifferentials = ({
   src,
   alt,
   title,
-  text
+  text,
+  id
 }: IOurDifferentials) => {
   return (
-    <article className="gapCol16 w-full rounded-2xl bg-midnightBlue p-4 duration-300 hover:scale-105 hover:brightness-110">
+    <article
+      className="gapCol16 w-full rounded-2xl bg-midnightBlue p-4 duration-300 hover:scale-105 hover:brightness-110"
+      data-aos="fade-up"
+      data-aos-delay={getDelay(id!)}
+    >
       <div className="mx-auto h-[80px] w-[80px]">
         <Picture src={src} alt={alt} $w={80} $h={80} />
       </div>

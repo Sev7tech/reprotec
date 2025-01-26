@@ -8,9 +8,10 @@ interface PictureProps {
   /** height as $h number type */
   $h: number
   className?: string
+  'data-aos'?: string
 }
 
-const Picture = ({ src, alt, $w, $h, className }: PictureProps) => {
+const Picture = ({ src, alt, $w, $h, className, ...rest }: PictureProps) => {
   return (
     <div
       style={{
@@ -36,6 +37,7 @@ const Picture = ({ src, alt, $w, $h, className }: PictureProps) => {
           height: '100%'
         }}
         role="img"
+        {...rest}
       />
     </div>
   )

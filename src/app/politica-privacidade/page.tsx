@@ -29,7 +29,7 @@ const PoliticaPrivacidade = () => {
       <Containers.Wrapper>
         <div className="mx-auto flex flex-col gap-14 lg:max-w-[80%]">
           <div className="gapCol16">
-            <h1 className="text-3xl font-bold md:text-4xl">
+            <h1 className="text-3xl font-bold text-black md:text-4xl">
               Política de Privacidade
             </h1>
 
