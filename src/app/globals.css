@@ -144,7 +144,11 @@ body {
     @apply text-2xl font-bold text-black;
   }
 
-  .text-highline {
-    @apply text-green-500;
+  .contact-information-text {
+    @apply text-base font-semibold text-black;
+  }
+
+  .titleH2 {
+    @apply text-2xl font-bold text-black md:text-3xl;
   }
 }
