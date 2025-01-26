@@ -241,7 +241,7 @@ export const servicesCardList: IServiceCard[] = [
     src: images.geladeria,
     alt: images.geladeiraAlt,
     cardTitle: 'Geladeira',
-    text: 'A Reprotec oferece manutenção e conserto de geladeiras com técnicos especializados. Realizamos serviços como troca de gás refrigerante, reparos no motor e solução de vazamentos, utilizando peças original, para garantir o funcionamento perfeito do seu equipamento. Confie em quem entende de refrigeração!',
+    text: 'A Reprotec oferece manutenção e conserto de geladeiras com técnicos especializados. Realizamos serviços como troca de gás refrigerante, reparos no motor e solução de vazamentos, utilizando peças original, para garantir o funcionamento perfeito do seu equipamento.',
     children: 'Geladeira',
     href: '/contact',
     title: 'Entre em contato para serviço de geladeira'
@@ -251,7 +251,7 @@ export const servicesCardList: IServiceCard[] = [
     src: images.microondas,
     alt: images.microondasAlt,
     cardTitle: 'Micro-ondas',
-    text: ' Na Reprotec, realizamos reparos e manutenção de micro-ondas com eficiência e rapidez. Nossa equipe especializada atua em problemas como falhas no aquecimento, defeitos no painel digital e troca de componentes. Garantimos qualidade e segurança no conserto do seu aparelho. Agende agora mesmo!',
+    text: ' Na Reprotec, realizamos reparos e manutenção de micro-ondas. Nossa equipe especializada atua em problemas como falhas no aquecimento, defeitos no painel digital e troca de componentes. Garantimos qualidade e segurança no conserto do seu aparelho.',
     children: 'Micro-ondas',
     href: '/contact',
     title: 'Entre em contato para serviço de micro-ondas'
@@ -261,7 +261,7 @@ export const servicesCardList: IServiceCard[] = [
     src: images.maquinaLavar,
     alt: images.maquinaLavarAlt,
     cardTitle: 'Máquina de Lavar',
-    text: 'Somos referência em manutenção e conserto de máquinas de lavar roupas. Solucionamos vazamentos, problemas no motor e defeitos em painéis eletrônicos das principais marcas do mercado. Com atendimento rápido e peças original, devolvemos a funcionalidade ao seu eletrodoméstico.',
+    text: 'Somos referência em manutenção e conserto de máquinas de lavar roupas. Solucionamos vazamentos, problemas no motor e defeitos em painéis eletrônicos das principais marcas do mercado. Com peças original, devolvemos a funcionalidade ao seu eletrodoméstico.',
     children: 'Máquina de Lavar',
     href: '/contact',
     title: 'Entre em contato para serviço de máquina de lavar'
@@ -291,7 +291,7 @@ export const servicesCardList: IServiceCard[] = [
     src: images.fornoEletrico,
     alt: images.fornoEletricoAlt,
     cardTitle: 'Forno Elétrico',
-    text: 'A Reprotec é especializada em reparos de fornos elétricos, oferecendo soluções para problemas como aquecimento insuficiente, defeitos no termostato e falhas no painel eletrônico. Trabalhamos com agilidade e utilizamos peças originais para garantir o melhor desempenho e durabilidade do seu forno. Confie na nossa expertise para manter seu forno em perfeito funcionamento!',
+    text: 'A Reprotec é especializada em reparos de fornos elétricos, oferecendo soluções para problemas como aquecimento insuficiente, defeitos no termostato e falhas no painel eletrônico. Trabalhamos com peças originais para garantir o melhor desempenho e durabilidade do seu forno.',
     children: 'Forno Elétrico',
     href: '/contact',
     title: 'Entre em contato para serviço de forno elétrico'

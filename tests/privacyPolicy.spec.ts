@@ -47,7 +47,7 @@ test.describe('Test for Privacy Policy page', () => {
   const texts = [
     {
       id: 1,
-      text: 'Última atualização:'
+      text: 'Última atualização:  27/01/2025'
     },
     {
       id: 2,
@@ -99,7 +99,7 @@ test.describe('Test for Privacy Policy page', () => {
     },
     {
       id: 14,
-      text: 'té [insira o prazo, ex.: 6 meses ou 1 ano] após o envio, sendo posteriormente excluídos'
+      text: 'por até 1 ano após o envio, sendo posteriormente excluídos ou anonimizados,'
     },
     {
       id: 15,
@@ -139,11 +139,11 @@ test.describe('Test for Privacy Policy page', () => {
     },
     {
       id: 2,
-      text: 'E-mail:'
+      text: 'E-mail: atendimento@reprotec.com.br'
     },
     {
       id: 2,
-      text: 'Telefone:'
+      text: 'Telefone: +55 11 2483-2924'
     },
     {
       id: 2,
@@ -151,11 +151,7 @@ test.describe('Test for Privacy Policy page', () => {
     }
   ]
 
-  test.beforeEach(async ({ page, context }) => {
-    await context.addInitScript(() => {
-      localStorage.setItem('cookieAccepted', 'yes')
-    })
-
+  test.beforeEach(async ({ page }) => {
     await page.goto('/politica-privacidade')
   })
 

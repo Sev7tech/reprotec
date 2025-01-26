@@ -36,10 +36,7 @@ test.describe('Tests for Credit page', () => {
     }
   ]
 
-  test.beforeEach(async ({ page, context }) => {
-    await context.addInitScript(() => {
-      localStorage.setItem('cookieAccepted', 'yes')
-    })
+  test.beforeEach(async ({ page }) => {
     await page.goto('/creditos')
   })
 
@@ -72,7 +69,7 @@ test.describe('Tests for Credit page', () => {
   test('Should have message visible', async ({ page }) => {
     await expect(
       page.getByText(
-        'desenvolvido pela Sev7tech.com , utiliza imagens e bibliotecas de código'
+        'desenvolvido pela Sev7tech.com, utiliza imagens e bibliotecas de código'
       )
     ).toBeVisible()
   })
