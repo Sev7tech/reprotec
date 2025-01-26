@@ -5,7 +5,7 @@ export const CTA = () => {
     <Link
       href="/contato"
       title="Entre em contato e fale com um de nossos especialista"
-      className="buttonBase bg-sky-500 text-midnightBlue hover:bg-sky-600 hover:text-white"
+      className="buttonBase bg-green-700 text-white hover:brightness-125"
     >
       Entrar em contato
     </Link>
