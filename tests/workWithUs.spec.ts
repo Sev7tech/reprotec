@@ -1,11 +1,7 @@
 import { expect, test } from '@playwright/test'
 
 test.describe('Tests for Work with us page', () => {
-  test.beforeEach(async ({ page, context }) => {
-    await context.addInitScript(() => {
-      localStorage.setItem('cookieAccepted', 'yes')
-    })
-
+  test.beforeEach(async ({ page }) => {
     await page.goto('/trabalhe-conosco')
   })
 

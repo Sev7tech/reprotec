@@ -36,10 +36,7 @@ test.describe('Tests for Credit page', () => {
     }
   ]
 
-  test.beforeEach(async ({ page, context }) => {
-    await context.addInitScript(() => {
-      localStorage.setItem('cookieAccepted', 'yes')
-    })
+  test.beforeEach(async ({ page }) => {
     await page.goto('/creditos')
   })
 
