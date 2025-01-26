@@ -21,7 +21,7 @@ const CookiePopup = () => {
     setPopupVisible(false)
   }
 
-  if (isPopupVisible) return null
+  if (!isPopupVisible) return null
 
   return (
     <article className="cookie-container">
