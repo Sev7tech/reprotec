@@ -5,6 +5,7 @@ import { Containers } from '@/components/Container'
 import { Typography } from '@/components/Typography'
 import { images, imagesCredits, libraryList } from '@/constants'
 import { IPageInfos } from '@/types'
+import { getDelay } from '@/utils/animation.utils'
 
 export const metadata: Metadata = {
   title: 'Créditos',
@@ -38,7 +39,7 @@ const Credits = () => {
       pageInfos={pageInfos}
     >
       <Containers.Wrapper>
-        <Typography.Text className="md:text-center">
+        <Typography.Text className="text-black md:text-center">
           Este site, desenvolvido pela{' '}
           <Typography.Link
             href="/https://www.sev7tech.com"
@@ -57,7 +58,11 @@ const Credits = () => {
 
         <ul className="grid grid-cols-1 gap-14 lg:grid-cols-2">
           {imagesCredits.map((items) => (
-            <li key={items.id}>
+            <li
+              key={items.id}
+              data-aos="fade-up"
+              data-aos-delay={getDelay(items.id! + 1)}
+            >
               <Cards.ImageCredits {...items} />
             </li>
           ))}

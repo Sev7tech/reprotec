@@ -40,14 +40,16 @@ const Contact = () => {
       pageInfos={pageInfos}
     >
       <Containers.Wrapper className="form-pages">
-        <div className="form-container">
+        <div className="form-container" data-aos="fade-up-left">
           <ContactForm />
         </div>
 
         <div className="gapCol24 lg:w-[70%]">
           <div className="gapCol16">
-            <h2 className="titleH2">Entre em Contato Conosco</h2>
-            <Typography.Text>
+            <h2 className="titleH2" data-aos="fade-up">
+              Entre em Contato Conosco
+            </h2>
+            <Typography.Text data-aos="fade-up">
               Estamos aqui para ajudar! Se você tem alguma dúvida ou precisa
               agendar um serviço de manutenção ou reparo, nossa equipe está
               pronta para atendê-lo com rapidez e eficiência. Preencha o

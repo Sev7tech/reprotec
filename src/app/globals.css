@@ -137,7 +137,7 @@ body {
   }
 
   .list-privacy-policy {
-    @apply ml-10 flex list-disc flex-col gap-2;
+    @apply ml-10 flex list-disc flex-col gap-2 text-black;
   }
 
   .sub-title-privacy-policy {

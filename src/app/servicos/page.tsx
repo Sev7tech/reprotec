@@ -7,6 +7,7 @@ import Picture from '@/components/Picture'
 import { Typography } from '@/components/Typography'
 import { images, servicesCardList } from '@/constants'
 import { IPageInfos } from '@/types'
+import { getDelay } from '@/utils/animation.utils'
 
 export const metadata: Metadata = {
   title: 'Serviços',
@@ -49,10 +50,11 @@ const Services = () => {
               alt={images.businessPartnersAlt}
               $w={75}
               $h={6}
+              data-aos="fade-up"
             />
           </div>
 
-          <Typography.Text>
+          <Typography.Text data-aos="fade-up">
             Explore nossa ampla variedade de serviços de manutenção, reparo de
             eletrodomésticos. Somos especialistas autorizados pelas marcas
             líderes do mercado, entre elas Medea, Carrier, Springer, Comfee e
@@ -66,14 +68,18 @@ const Services = () => {
 
         <ul className="servicesList">
           {servicesCardList.map((items) => (
-            <li key={items.id}>
+            <li
+              key={items.id}
+              data-aos={items.id! % 2 === 0 ? 'fade-up-left' : 'fade-up-right'}
+              data-aos-delay={getDelay(items.id!)}
+            >
               <Cards.ServicesCard {...items} isSeoTitle />
             </li>
           ))}
         </ul>
 
         <div className="gapCol24">
-          <Typography.Text>
+          <Typography.Text data-aos="fade-up">
             Fale com a gente agora mesmo! Nossa equipe está pronta para ajudar
             você a encontrar a solução perfeita para sua casa ou empresa.
             Oferecemos atendimento personalizado e serviços sob medida, sempre

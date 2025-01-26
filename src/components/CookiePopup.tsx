@@ -24,7 +24,7 @@ const CookiePopup = () => {
   if (!isPopupVisible) return null
 
   return (
-    <article className="cookie-container">
+    <article className="cookie-container" data-aos="zoom-in-up">
       <div className="mx-auto max-w-[600px] text-center">
         <Typography.Text className="text-white">
           Usamos cookies para melhorar sua experiência. Ao continuar navegando,

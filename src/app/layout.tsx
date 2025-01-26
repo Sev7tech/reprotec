@@ -2,6 +2,8 @@ import type { Metadata } from 'next'
 import { Barlow } from 'next/font/google'
 
 import './globals.css'
+import Provider from './provider'
+
 import Footer from '@/components/Footer'
 import Header from '@/components/Header'
 import { Buttons } from '@/components/Buttons'
@@ -73,11 +75,13 @@ export default function RootLayout({
   return (
     <html lang="pt">
       <body className={`${barlow.variable} bg-gray-100 antialiased`}>
-        <CookiePopup />
-        <Header />
-        {children}
-        <Buttons.WhatsApp />
-        <Footer />
+        <Provider>
+          <CookiePopup />
+          <Header />
+          {children}
+          <Buttons.WhatsApp />
+          <Footer />
+        </Provider>
       </body>
     </html>
   )

@@ -9,6 +9,7 @@ import { BlueTitle } from './BlueTitle'
 export interface ITypographyBase {
   children: ReactNode
   className?: string
+  'data-aos'?: string
 }
 
 export const Typography = {

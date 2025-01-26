@@ -19,7 +19,8 @@ const CustomLink = ({
   isFooterLink,
   onClick,
   isTextWhite,
-  className
+  className,
+  ...rest
 }: ICustomLink) => {
   return (
     <Link
@@ -35,6 +36,7 @@ const CustomLink = ({
       aria-label={linkTitle}
       target={target}
       onClick={onClick}
+      {...rest}
     >
       {children}
     </Link>

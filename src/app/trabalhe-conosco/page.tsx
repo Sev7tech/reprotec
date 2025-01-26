@@ -41,24 +41,26 @@ const WorkWithUs = () => {
       pageInfos={pageInfos}
     >
       <Containers.Wrapper className="form-pages">
-        <div className="form-container">
+        <div className="form-container" data-aos="fade-up-right">
           <WorkForm />
         </div>
         <div className="gapCol16 lg:w-[70%]">
-          <h2 className="titleH2">Trabalhe Conosco - Reprotec</h2>
-          <Typography.Text>
+          <h2 className="titleH2" data-aos="fade-up">
+            Trabalhe Conosco - Reprotec
+          </h2>
+          <Typography.Text data-aos="fade-up">
             Quer fazer parte de uma equipe referência em reparo e manutenção de
             eletrodomésticos? Na Reprotec, cuidamos de geladeiras, máquinas de
             lavar, micro-ondas, fogões, ar condicionados e muito mais.
             Trabalhamos com grandes marcas como Medea, Carrier, Springer, Comfee
             e TOSHIBA, oferecendo tecnologia de ponta e excelência.
           </Typography.Text>
-          <Typography.Text>
+          <Typography.Text data-aos="fade-up">
             Buscamos pessoas proativas, apaixonadas por resolver problemas e que
             queiram crescer conosco. Envie seu currículo e venha fazer parte do
             time Reprotec!
           </Typography.Text>
-          <Typography.Text>
+          <Typography.Text data-aos="fade-up">
             Não encontrou uma vaga aberta? Envie seu currículo mesmo assim.
             Estamos sempre em busca de talentos!
           </Typography.Text>
