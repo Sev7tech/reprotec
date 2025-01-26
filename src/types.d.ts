@@ -18,6 +18,7 @@ interface IContact extends IImage, ILink {}
 interface IServiceCard extends IImage, ILink {
   cardTitle: string
   text: string
+  isSeoTitle?: boolean
 }
 
 interface IImagesCredits extends IImage {
