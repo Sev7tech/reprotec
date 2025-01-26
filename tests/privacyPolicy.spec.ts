@@ -99,7 +99,7 @@ test.describe('Test for Privacy Policy page', () => {
     },
     {
       id: 14,
-      text: 'té [insira o prazo, ex.: 6 meses ou 1 ano] após o envio, sendo posteriormente excluídos'
+      text: 'por até 1 ano após o envio, sendo posteriormente excluídos ou anonimizados,'
     },
     {
       id: 15,
