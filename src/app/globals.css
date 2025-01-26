@@ -151,4 +151,8 @@ body {
   .titleH2 {
     @apply text-2xl font-bold text-black md:text-3xl;
   }
+
+  .cookie-container {
+    @apply fixed bottom-0 left-0 z-50 w-screen bg-gray-900/90 p-4;
+  }
 }
