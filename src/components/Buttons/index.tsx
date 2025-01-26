@@ -6,6 +6,7 @@ import { CTA2 } from './CTA2'
 import { CallCenter } from './CallCenter'
 import { WhatsApp } from './WhatsApp'
 import { Submit } from './Submit'
+import { SeeAll } from './SeeAll'
 
 export interface IButtons {
   children: ReactNode
@@ -17,5 +18,6 @@ export const Buttons = {
   CTA2,
   CallCenter,
   WhatsApp,
-  Submit
+  Submit,
+  SeeAll
 }
