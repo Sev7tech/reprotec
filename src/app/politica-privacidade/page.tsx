@@ -2,6 +2,7 @@ import { Metadata } from 'next'
 
 import { Containers } from '@/components/Container'
 import { Typography } from '@/components/Typography'
+import { CONFIG } from '@/config'
 
 export const metadata: Metadata = {
   title: 'Política de Privacidade',
@@ -33,7 +34,7 @@ const PoliticaPrivacidade = () => {
             </h1>
 
             <Typography.Text>
-              <strong>Última atualização: [Data]</strong>
+              <strong>Última atualização: 27/01/2025</strong>
               <br />A Reprotec valoriza a privacidade de seus usuários e está
               comprometida em proteger suas informações pessoais. Esta Política
               de Privacidade descreve como coletamos, utilizamos e protegemos os
@@ -128,9 +129,9 @@ const PoliticaPrivacidade = () => {
               </li>
               <li>
                 <Typography.Text>
-                  Os currículos serão armazenados por até [insira o prazo, ex.:
-                  6 meses ou 1 ano] após o envio, sendo posteriormente excluídos
-                  ou anonimizados, salvo obrigação legal para retenção.
+                  Os currículos serão armazenados por até 1 ano após o envio,
+                  sendo posteriormente excluídos ou anonimizados, salvo
+                  obrigação legal para retenção.
                 </Typography.Text>
               </li>
             </ul>
@@ -214,10 +215,14 @@ const PoliticaPrivacidade = () => {
 
             <ul className="list-privacy-policy">
               <li>
-                <Typography.Text>E-mail: [Inserir e-mail]</Typography.Text>
+                <Typography.Text>
+                  E-mail: {CONFIG.contact.email.children}
+                </Typography.Text>
               </li>
               <li>
-                <Typography.Text>Telefone: [Inserir telefone]</Typography.Text>
+                <Typography.Text>
+                  Telefone: {CONFIG.contact.phone.children}
+                </Typography.Text>
               </li>
             </ul>
           </div>

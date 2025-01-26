@@ -46,7 +46,7 @@ const Credits = () => {
             target="_blank"
           >
             Sev7tech.com
-          </Typography.Link>{' '}
+          </Typography.Link>
           , utiliza imagens e bibliotecas de código aberto que gostaríamos de
           agradecer e creditar abaixo.
         </Typography.Text>
@@ -54,6 +54,7 @@ const Credits = () => {
 
       <Containers.Wrapper>
         <h2 className="creditsTitle">Images</h2>
+
         <ul className="grid grid-cols-1 gap-14 lg:grid-cols-2">
           {imagesCredits.map((items) => (
             <li key={items.id}>
@@ -64,23 +65,22 @@ const Credits = () => {
       </Containers.Wrapper>
 
       <Containers.Wrapper>
-        <div className="gapCol24">
-          <h2 className="creditsTitle">Bibliotecas & Framework</h2>
-          <ul className="grid grid-cols-1 gap-4 md:grid-cols-2">
-            {libraryList.map((item) => (
-              <li key={item.id} className="relative py-3">
-                <Typography.Link
-                  href={item.href}
-                  linkTitle={item.title}
-                  className="absolute w-full"
-                  target="_blank"
-                >
-                  {item.children}
-                </Typography.Link>
-              </li>
-            ))}
-          </ul>
-        </div>
+        <h2 className="creditsTitle">Bibliotecas & Framework</h2>
+
+        <ul className="grid grid-cols-1 gap-4 md:grid-cols-2">
+          {libraryList.map((item) => (
+            <li key={item.id} className="relative py-3">
+              <Typography.Link
+                href={item.href}
+                linkTitle={item.title}
+                className="absolute w-full"
+                target="_blank"
+              >
+                {item.children}
+              </Typography.Link>
+            </li>
+          ))}
+        </ul>
       </Containers.Wrapper>
     </Containers.PageContainer>
   )

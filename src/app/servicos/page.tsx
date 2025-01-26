@@ -67,7 +67,7 @@ const Services = () => {
         <ul className="servicesList">
           {servicesCardList.map((items) => (
             <li key={items.id}>
-              <Cards.ServicesCard {...items} />
+              <Cards.ServicesCard {...items} isSeoTitle />
             </li>
           ))}
         </ul>
