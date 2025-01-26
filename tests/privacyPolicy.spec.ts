@@ -47,7 +47,7 @@ test.describe('Test for Privacy Policy page', () => {
   const texts = [
     {
       id: 1,
-      text: 'Última atualização:'
+      text: 'Última atualização:  27/01/2025'
     },
     {
       id: 2,
@@ -139,11 +139,11 @@ test.describe('Test for Privacy Policy page', () => {
     },
     {
       id: 2,
-      text: 'E-mail:'
+      text: 'E-mail: atendimento@reprotec.com.br'
     },
     {
       id: 2,
-      text: 'Telefone:'
+      text: 'Telefone: +55 11 2483-2924'
     },
     {
       id: 2,
