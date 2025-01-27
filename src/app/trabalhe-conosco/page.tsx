@@ -28,8 +28,8 @@ export const metadata: Metadata = {
 }
 
 const pageInfos: IPageInfos = {
-  title: 'Trabalhe conosco',
-  children: 'Trabalhe conosco',
+  title: 'Trabalhe Conosco',
+  children: 'Trabalhe Conosco',
   href: '/trabalhe-conosco'
 }
 
