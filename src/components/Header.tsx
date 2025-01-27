@@ -35,7 +35,7 @@ const Header = memo(() => {
                 </Typography.Link>
               </li>
             ))}
-            <li className="fixed bottom-[calc(12vh)] mt-16 w-[91vw] md:hidden">
+            <li className="flexCenter">
               <Buttons.CallCenter isMobile />
             </li>
           </ul>

@@ -12,7 +12,7 @@ export const CallCenter = ({ isMobile = true }: CallCenterProps) => (
   <Typography.Link
     href={CONFIG.contact.phone.URL}
     linkTitle="Falar com um atendente Reprotec"
-    className={`border-midnightBlue/10 duration-200 ${isMobile ? 'flexCenter bg-cyan-500 md:hidden' : 'md:flexCenter hidden'} gap-2 rounded-3xl border-2 p-2 hover:border-blue-900 hover:text-white`}
+    className={`border-midnightBlue/10 duration-200 ${isMobile ? 'flexCenter absolute bottom-4 bg-cyan-500 px-14 md:hidden' : 'md:flexCenter hidden'} gap-2 rounded-3xl border-2 p-2 hover:border-blue-900 hover:text-white`}
     isTextWhite
     target="_blank"
   >
