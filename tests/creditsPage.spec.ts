@@ -4,38 +4,38 @@ import { libraryList } from '@/constants'
 
 let selector: Locator
 
+const titles = [
+  {
+    id: 1,
+    title: 'Créditos & Agradecimentos'
+  },
+  {
+    id: 2,
+    title: 'Images'
+  },
+  {
+    id: 3,
+    title: 'Bibliotecas & Framework'
+  }
+]
+
+const bannerLinks = [
+  {
+    id: 1,
+    linkTitle: 'Ir para a página Home',
+    href: '/',
+    pageTitle:
+      'Cuidamos dos Seus Eletrodomésticos, Para um Lar Sem Preocupações'
+  },
+  {
+    id: 2,
+    linkTitle: 'Ir para a página Creditos',
+    href: '/creditos',
+    pageTitle: 'Créditos & Agradecimentos'
+  }
+]
+
 test.describe('Tests for Credit page', () => {
-  const titles = [
-    {
-      id: 1,
-      title: 'Créditos & Agradecimentos'
-    },
-    {
-      id: 2,
-      title: 'Images'
-    },
-    {
-      id: 3,
-      title: 'Bibliotecas & Framework'
-    }
-  ]
-
-  const bannerTests = [
-    {
-      id: 1,
-      linkTitle: 'Ir para a página Home',
-      href: '/',
-      pageTitle:
-        'Cuidamos dos Seus Eletrodomésticos, Para um Lar Sem Preocupações'
-    },
-    {
-      id: 2,
-      linkTitle: 'Ir para a página Creditos',
-      href: '/creditos',
-      pageTitle: 'Créditos & Agradecimentos'
-    }
-  ]
-
   test.beforeEach(async ({ page }) => {
     await page.goto('/creditos')
   })
@@ -44,7 +44,7 @@ test.describe('Tests for Credit page', () => {
     await expect(page).toHaveTitle(/Créditos | Reprotec/)
   })
 
-  bannerTests.forEach((item) => {
+  bannerLinks.forEach((item) => {
     test(`Link banner Should navigate to the correct page - id ${item.id}`, async ({
       page
     }) => {
