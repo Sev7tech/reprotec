@@ -4,26 +4,26 @@ import { navigatorLinks } from '@/constants'
 
 let selector: Locator
 
-test.describe('Tests for Header', () => {
-  const titles = [
-    {
-      id: 1,
-      title: 'Cuidamos dos Seus Eletrodomésticos, Para um Lar Sem Preocupações'
-    },
-    {
-      id: 2,
-      title: 'Serviços'
-    },
-    {
-      id: 3,
-      title: 'Trabalhe conosco'
-    },
-    {
-      id: 4,
-      title: 'Entre em contato conosco'
-    }
-  ]
+const titles = [
+  {
+    id: 1,
+    title: 'Cuidamos dos Seus Eletrodomésticos, Para um Lar Sem Preocupações'
+  },
+  {
+    id: 2,
+    title: 'Serviços'
+  },
+  {
+    id: 3,
+    title: 'Trabalhe conosco'
+  },
+  {
+    id: 4,
+    title: 'Entre em contato conosco'
+  }
+]
 
+test.describe('Tests for Header', () => {
   test.beforeEach(async ({ page }) => {
     await page.goto('/')
   })
