@@ -9,7 +9,6 @@
 }
 
 body {
-  overflow-x: hidden;
   font-family: var(--font-barlow), sans-serif;
 }
 
@@ -97,7 +96,7 @@ body {
   }
 
   .mainNav {
-    @apply fixed left-0 top-[64px] h-dvh w-full px-4 duration-300 lg:static lg:h-auto lg:w-auto lg:bg-transparent;
+    @apply h-screen fixed left-0 top-[64px] w-full px-4 duration-300 lg:static lg:h-auto lg:w-auto lg:bg-transparent;
   }
 
   .input-focus {
@@ -153,6 +152,6 @@ body {
   }
 
   .cookie-container {
-    @apply fixed bottom-0 left-0 z-50 w-full bg-gray-900/90 p-4;
+    @apply fixed bottom-0 left-0 z-50 w-screen bg-gray-900/90 p-4;
   }
 }
