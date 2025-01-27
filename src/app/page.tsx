@@ -18,7 +18,7 @@ export default function Home() {
       bannerAlt="Casal feliz em casa, com eletrodomésticos funcionando bem"
       bannerChildren={
         <section
-          className="flex w-screen flex-col gap-8 text-left md:gap-10 md:text-center lg:max-w-[68%]"
+          className="flex w-full flex-col gap-8 text-left md:gap-10 md:text-center lg:max-w-[68%]"
           data-aos="zoom-in-up"
         >
           <h1 className="mainTitle">

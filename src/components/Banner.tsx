@@ -9,7 +9,7 @@ export interface BannerProps extends IImage {
 
 const Banner = ({ children, src, alt }: BannerProps) => {
   return (
-    <section role="banner" className="banner flexCenter w-screen">
+    <section role="banner" className="banner flexCenter">
       <Image
         src={src}
         alt={alt}

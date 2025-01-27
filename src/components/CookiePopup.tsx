@@ -25,7 +25,7 @@ const CookiePopup = () => {
 
   return (
     <article className="cookie-container" data-aos="zoom-in-up">
-      <div className="mx-auto max-w-[600px] text-center">
+      <div className="mx-auto max-w-[600px] space-y-4 text-center">
         <Typography.Text className="text-white">
           Usamos cookies para melhorar sua experiência. Ao continuar navegando,
           você concorda com nossa{' '}
@@ -39,7 +39,7 @@ const CookiePopup = () => {
         </Typography.Text>
         <button
           onClick={handleAccept}
-          className="buttonBase mx-auto mt-4 bg-green-500 py-1"
+          className="mx-auto rounded-3xl bg-green-500 px-4 py-1 text-base font-medium"
         >
           Eu aceito
         </button>
