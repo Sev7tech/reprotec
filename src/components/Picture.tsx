@@ -8,9 +8,10 @@ interface PictureProps {
   /** height as $h number type */
   $h: number
   className?: string
+  'data-aos'?: string
 }
 
-const Picture = ({ src, alt, $w, $h, className }: PictureProps) => {
+const Picture = ({ src, alt, $w, $h, className, ...rest }: PictureProps) => {
   return (
     <div
       style={{
@@ -27,6 +28,7 @@ const Picture = ({ src, alt, $w, $h, className }: PictureProps) => {
         alt={alt}
         aria-label={alt}
         fill
+        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
         quality={70}
         loading="eager"
         style={{
@@ -35,6 +37,7 @@ const Picture = ({ src, alt, $w, $h, className }: PictureProps) => {
           height: '100%'
         }}
         role="img"
+        {...rest}
       />
     </div>
   )

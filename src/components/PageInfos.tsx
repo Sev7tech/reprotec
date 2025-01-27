@@ -4,14 +4,17 @@ import { IPageInfos } from '@/types'
 
 const PageInfos = ({ title, children, href }: IPageInfos) => {
   return (
-    <section className="flex flex-col gap-20 md:max-w-[60%] lg:gap-32">
+    <section
+      className="flex flex-col gap-20 md:max-w-[95%] lg:gap-32"
+      data-aos="zoom-in-up"
+    >
       <h1 className="mainTitle">{title}</h1>
 
       <ul className="flexCenter gap-1">
         <li>
           <Typography.Link
             href="/"
-            linkTitle="Ir para a página home"
+            linkTitle="Ir para a página Home"
             isTextWhite
           >
             Home

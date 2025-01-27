@@ -1,11 +1,30 @@
-import Link from 'next/link'
+import { Metadata } from 'next'
 
 import { Containers } from '@/components/Container'
 import ContactForm from '@/components/Form/ContactForm'
-import Picture from '@/components/Picture'
 import { images } from '@/constants'
 import { IPageInfos } from '@/types'
 import { Typography } from '@/components/Typography'
+import ContactInformation from '@/components/ContactInformation'
+
+export const metadata: Metadata = {
+  title: 'Contato',
+  description:
+    'Entre em contato com a Reprotec para mais informações sobre reparos de eletrodomésticos em Guarulhos e São Paulo. Estamos prontos para ajudar!',
+  keywords:
+    'contato, reparo de eletrodomésticos, atendimento, Guarulhos, São Paulo, assistência técnica',
+  openGraph: {
+    title: 'Contato',
+    description:
+      'Entre em contato com a Reprotec e saiba como podemos ajudar no conserto de seus eletrodomésticos em Guarulhos e São Paulo.',
+    url: 'https://reprotec.com.br/contato'
+  },
+  twitter: {
+    title: 'Contato',
+    description:
+      'Entre em contato com a Reprotec para mais informações sobre reparos de eletrodomésticos.'
+  }
+}
 
 const pageInfos: IPageInfos = {
   title: 'Entre em contato conosco',
@@ -20,66 +39,25 @@ const Contact = () => {
       bannerAlt={images.bannerAlt}
       pageInfos={pageInfos}
     >
-      <Containers.Wrapper>
-        <div className="form-pages">
-          <div className="form-container">
-            <ContactForm />
-          </div>
+      <Containers.Wrapper className="form-pages">
+        <div className="form-container" data-aos="fade-up-left">
+          <ContactForm />
+        </div>
 
-          <div className="gapCol24 lg:w-[70%]">
-            <div className="gapCol16">
-              <Typography.H2>Entre em Contato Conosco</Typography.H2>
-              <Typography.Text>
-                Estamos aqui para ajudar! Se você tem alguma dúvida ou precisa
-                agendar um serviço de manutenção ou reparo, nossa equipe está
-                pronta para atendê-lo com rapidez e eficiência. Preencha o
-                formulário abaixo ou entre em contato através dos nossos canais
-                e responderemos o mais breve possível.
-              </Typography.Text>
-            </div>
+        <div className="gapCol24 lg:w-[70%]">
+          <div className="gapCol16">
+            <h2 className="titleH2" data-aos="fade-up">
+              Fale com o Suporte da Reprotec
+            </h2>
+            <Typography.Text data-aos="fade-up">
+              Estamos aqui para ajudar! Se você tem alguma dúvida ou precisa
+              agendar um serviço de manutenção ou reparo, nossa equipe está
+              pronta para atendê-lo com rapidez e eficiência. Preencha o
+              formulário abaixo ou entre em contato através dos nossos canais e
+              responderemos o mais breve possível.
+            </Typography.Text>
 
-            <div className="flex gap-8">
-              <div className="h-[80px] w-[80px] overflow-hidden rounded-full">
-                <Picture
-                  src={images.callCenter}
-                  alt={images.callCenterAlt}
-                  $w={56}
-                  $h={56}
-                />
-              </div>
-
-              <div className="flex flex-col">
-                <h4 className="smallTitle">Tem uma pergunta?</h4>
-                <Link
-                  href={'contact'}
-                  title="Entre em contato com o atendimento Reprotec"
-                  target="_blank"
-                  className="text-base font-medium"
-                >
-                  +55 11 2483-2924
-                </Link>
-              </div>
-            </div>
-
-            <div>
-              <h4 className="smallTitle">Horario de atendimento</h4>
-              <p className="font-medium">Segunda a Sexta: 08:00h - 18:00h</p>
-            </div>
-
-            <div>
-              <h4 className="smallTitle">
-                Reprotec-Assistência Técnica Autorizada
-              </h4>
-              <Link
-                href={'mapa'}
-                title="Veja no mapa"
-                className="text-base font-medium"
-                target="_blank"
-              >
-                Avenida Venturosa, 111 - Jd. Cumbica - Guarulhos - cep:
-                07240-000
-              </Link>
-            </div>
+            <ContactInformation />
           </div>
         </div>
       </Containers.Wrapper>

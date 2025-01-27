@@ -16,19 +16,21 @@ const ImageCredits = ({
   linkTitle2
 }: IImagesCredits) => {
   return (
-    <article className="w-full">
-      <Picture src={src} alt={alt} $w={300} $h={400} />
-      <div>
-        <Typography.H3>Autor:</Typography.H3>
-        <Typography.Link href={href1} linkTitle={linkTitle1}>
-          {link1}
-        </Typography.Link>
-      </div>
-      <div>
-        <Typography.H3>Banco de imagem</Typography.H3>
-        <Typography.Link href={href2} linkTitle={linkTitle2}>
-          {link2}
-        </Typography.Link>
+    <article className="w-full overflow-hidden rounded-xl duration-300 hover:scale-105">
+      <Picture src={src} alt={alt} $w={600} $h={400} />
+      <div className="bg-sky-100 p-4">
+        <div className="container-flex">
+          <Typography.H3>Autor:</Typography.H3>
+          <Typography.Link href={href1} linkTitle={linkTitle1}>
+            {link1}
+          </Typography.Link>
+        </div>
+        <div className="container-flex">
+          <Typography.H3>Banco de imagem: </Typography.H3>
+          <Typography.Link href={href2} linkTitle={linkTitle2}>
+            {link2}
+          </Typography.Link>
+        </div>
       </div>
     </article>
   )

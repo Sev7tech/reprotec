@@ -1,7 +1,6 @@
 'use server'
 
 import nodemailer from 'nodemailer'
-import SMTPTransport from 'nodemailer/lib/smtp-transport'
 
 import { ISendForm } from '@/types'
 

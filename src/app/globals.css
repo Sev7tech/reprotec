@@ -19,11 +19,11 @@ body {
   }
 
   .buttonBase {
-    @apply rounded-3xl px-5 py-2 text-lg font-semibold text-white;
+    @apply rounded-3xl px-5 py-3 text-lg font-semibold text-white duration-300;
   }
 
   .mainTitle {
-    @apply text-4xl font-extrabold text-white md:text-5xl;
+    @apply text-4xl font-extrabold text-white md:text-6xl;
   }
 
   .secondaryTitle {
@@ -40,6 +40,10 @@ body {
 
   .SubmitButton {
     @apply buttonBase mt-4 bg-primaryBlue hover:brightness-125;
+  }
+
+  .creditsTitle {
+    @apply text-4xl font-semibold text-black;
   }
 }
 
@@ -126,5 +130,29 @@ body {
 
   .form-container {
     @apply w-full md:mx-auto md:w-[90%] lg:w-[70%];
+  }
+
+  .container-flex {
+    @apply block md:flex md:items-center md:gap-2;
+  }
+
+  .list-privacy-policy {
+    @apply ml-10 flex list-disc flex-col gap-2 text-black;
+  }
+
+  .sub-title-privacy-policy {
+    @apply text-2xl font-bold text-black;
+  }
+
+  .contact-information-text {
+    @apply text-base font-semibold text-black;
+  }
+
+  .titleH2 {
+    @apply text-2xl font-bold text-black md:text-3xl;
+  }
+
+  .cookie-container {
+    @apply fixed bottom-0 left-0 z-50 w-full bg-gray-900/90 p-4;
   }
 }

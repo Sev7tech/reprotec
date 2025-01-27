@@ -4,10 +4,11 @@ interface IText extends ITypographyBase {
   className?: string
 }
 
-const Text = ({ children, className }: IText) => {
+const Text = ({ children, className, ...rest }: IText) => {
   return (
     <p
-      className={`text-base font-normal ${className ? className : 'text-black'}`}
+      className={`text-lg font-normal ${className ? className : 'text-black'}`}
+      {...rest}
     >
       {children}
     </p>
