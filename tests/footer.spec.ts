@@ -130,7 +130,7 @@ test.describe('Test for footer', () => {
       await expect(selector).toHaveAttribute('href', link.href)
       await expect(selector).toHaveText(link.children as string)
 
-      if (index <= 1) {
+      if (link.id) {
         await selector.click()
         await expect(
           page.getByRole('heading', {
