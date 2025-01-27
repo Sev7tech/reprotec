@@ -243,7 +243,7 @@ export const servicesCardList: IServiceCard[] = [
     cardTitle: 'Geladeira',
     text: 'A Reprotec oferece manutenção e conserto de geladeiras com técnicos especializados. Realizamos serviços como troca de gás refrigerante, reparos no motor e solução de vazamentos, utilizando peças original, para garantir o funcionamento perfeito do seu equipamento.',
     children: 'Geladeira',
-    href: '/contato',
+    href: CONFIG.contact.phone.URL,
     title: 'Entre em contato para serviço de geladeira'
   },
   {
@@ -253,7 +253,7 @@ export const servicesCardList: IServiceCard[] = [
     cardTitle: 'Micro-ondas',
     text: ' Na Reprotec, realizamos reparos e manutenção de micro-ondas. Nossa equipe especializada atua em problemas como falhas no aquecimento, defeitos no painel digital e troca de componentes. Garantimos qualidade e segurança no conserto do seu aparelho.',
     children: 'Micro-ondas',
-    href: '/contato',
+    href: CONFIG.contact.phone.URL,
     title: 'Entre em contato para serviço de micro-ondas'
   },
   {
@@ -263,7 +263,7 @@ export const servicesCardList: IServiceCard[] = [
     cardTitle: 'Máquina de Lavar',
     text: 'Somos referência em manutenção e conserto de máquinas de lavar roupas. Solucionamos vazamentos, problemas no motor e defeitos em painéis eletrônicos das principais marcas do mercado. Com peças original, devolvemos a funcionalidade ao seu eletrodoméstico.',
     children: 'Máquina de Lavar',
-    href: '/contato',
+    href: CONFIG.contact.phone.URL,
     title: 'Entre em contato para serviço de máquina de lavar'
   },
   {
@@ -273,7 +273,7 @@ export const servicesCardList: IServiceCard[] = [
     cardTitle: 'Fogão & Cooktop',
     text: 'A Reprotec é especialista em reparos de fogões e cooktops, oferecendo serviços como conserto de queimadores, ajustes de válvulas e troca de ignitores. Atendemos modelos a gás ou elétricos com rapidez e segurança, garantindo uma cozinha em pleno funcionamento.',
     children: 'Fogão & Cooktop',
-    href: '/contato',
+    href: CONFIG.contact.phone.URL,
     title: 'Entre em contato para serviço de fogão e cooktop'
   },
   {
@@ -283,7 +283,7 @@ export const servicesCardList: IServiceCard[] = [
     cardTitle: 'Ar Condicionado',
     text: 'Oferecemos manutenção e conserto de ar-condicionado para ambientes residenciais e comerciais. Trabalhamos com recarga de gás, limpeza, reparos técnicos e substituição de peças, assegurando máxima eficiência e conforto térmico. Entre em contato para atendimento especializado!',
     children: 'Ar Condicionado',
-    href: '/contato',
+    href: CONFIG.contact.phone.URL,
     title: 'Entre em contato para serviço de ar condicionado'
   },
   {
@@ -293,7 +293,7 @@ export const servicesCardList: IServiceCard[] = [
     cardTitle: 'Forno Elétrico',
     text: 'A Reprotec é especializada em reparos de fornos elétricos, oferecendo soluções para problemas como aquecimento insuficiente, defeitos no termostato e falhas no painel eletrônico. Trabalhamos com peças originais para garantir o melhor desempenho e durabilidade do seu forno.',
     children: 'Forno Elétrico',
-    href: '/contato',
+    href: CONFIG.contact.phone.URL,
     title: 'Entre em contato para serviço de forno elétrico'
   },
   {
@@ -303,7 +303,7 @@ export const servicesCardList: IServiceCard[] = [
     cardTitle: 'Freezer',
     text: 'A Reprotec oferece manutenção e conserto de freezers para modelos verticais e horizontais. Realizamos reparos no compressor, solução de vazamentos e ajustes no sistema de refrigeração, sempre utilizando peças originais. Garantimos o desempenho ideal do seu freezer, mantendo seus alimentos sempre conservados. Agende já!',
     children: 'Freezer',
-    href: '/contato',
+    href: CONFIG.contact.phone.URL,
     title: 'Entre em contato para serviço de freezer'
   },
   {
@@ -313,7 +313,7 @@ export const servicesCardList: IServiceCard[] = [
     cardTitle: 'Adega',
     text: 'A Reprotec é especialista em manutenção de adegas climatizadas. Realizamos reparos em sistemas de refrigeração, falhas no termostato e ajustes técnicos, garantindo que seus vinhos fiquem na temperatura ideal. Conte com nossa experiência para preservar a qualidade e conservação dos seus vinhos. Agende agora!',
     children: 'Adega',
-    href: '/contato',
+    href: CONFIG.contact.phone.URL,
     title: 'Entre em contato para serviço de adega'
   },
   {
@@ -323,7 +323,7 @@ export const servicesCardList: IServiceCard[] = [
     cardTitle: 'Coifa',
     text: 'A Reprotec é especializada em manutenção e conserto de coifas. Realizamos reparos em motores, filtros e ventilação, garantindo a eficiência do exaustor. Atendemos modelos residenciais e comerciais, mantendo sua cozinha livre de fumaça e odores. Agende agora!',
     children: 'Coifa',
-    href: '/contato',
+    href: CONFIG.contact.phone.URL,
     title: 'Entre em contato para serviço de coifa'
   }
 ]
