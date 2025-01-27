@@ -47,7 +47,7 @@ const Contact = () => {
         <div className="gapCol24 lg:w-[70%]">
           <div className="gapCol16">
             <h2 className="titleH2" data-aos="fade-up">
-              Entre em Contato Conosco
+              Fale com o Suporte da Reprotec
             </h2>
             <Typography.Text data-aos="fade-up">
               Estamos aqui para ajudar! Se você tem alguma dúvida ou precisa

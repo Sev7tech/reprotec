@@ -4,7 +4,7 @@ import { Typography } from './Typography'
 
 import {
   contactList,
-  creditsLinks,
+  legalAndCreditsLinks,
   navigatorLinks,
   servicesLinks
 } from '@/constants'
@@ -61,11 +61,9 @@ const Footer = () => {
         <section className="gapCol16">
           <Brand src="/images/logo-white.png" />
           <Typography.Text className="text-sm text-slate-300">
-            Na Reprotec, oferecemos serviços técnicos de reparo eficientes,
-            rápidos e personalizados, com foco total na satisfação do cliente.
-            Nossa equipe altamente qualificada garante soluções de alta
-            qualidade e excelência no atendimento, buscando sempre superar as
-            suas expectativas.
+            Reprotec, conserto de eletrodomésticos rápido, eficiente e sob
+            medida para você. Qualidade e sua satisfação sempre em primeiro
+            lugar!
           </Typography.Text>
         </section>
 
@@ -90,7 +88,7 @@ const Footer = () => {
           &copy; {currentYear} Reprotec, todos os direitos reservados.
         </Typography.Text>
         <ul className="gapCol16 md:flex md:flex-row">
-          {creditsLinks.map((link) => (
+          {legalAndCreditsLinks.map((link) => (
             <li key={link.id}>
               <Typography.Link
                 href={link.href}
