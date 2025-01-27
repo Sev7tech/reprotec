@@ -14,7 +14,7 @@ const Header = memo(() => {
   const toggleMenu = () => setMenuOpen(!menuOpen)
 
   return (
-    <header className="fixed top-0 z-50 w-screen bg-midnightBlue lg:w-full">
+    <header className="fixed top-0 z-50 w-full bg-midnightBlue lg:w-full">
       <div className="max-container flexBetween w-95 relative py-4 md:py-2">
         <Brand src="/images/logo-white.png" />
         <nav

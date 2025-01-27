@@ -82,8 +82,8 @@ export default function RootLayout({
           {children}
           <Buttons.WhatsApp />
           <Footer />
+          <CookiePopup />
         </Provider>
-        <CookiePopup />
       </body>
     </html>
   )
