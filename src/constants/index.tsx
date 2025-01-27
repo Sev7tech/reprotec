@@ -163,7 +163,7 @@ export const servicesLinks: ILink[] = [
   }
 ]
 
-export const creditsLinks: ILink[] = [
+export const legalAndCreditsLinks: ILink[] = [
   {
     id: 1,
     children: 'Créditos',
