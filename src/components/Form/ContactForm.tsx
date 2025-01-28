@@ -13,20 +13,27 @@ import sendForm from '@/utils/form.utils'
 
 const validationSchema = Yup.object({
   firstName: Yup.string()
+    .trim()
     .min(2, 'O nome deve ter no mínimo 2 caracteres.')
     .required('Campo obrigatório'),
   lastName: Yup.string()
+    .trim()
     .min(2, 'O sobrenome deve ter no mínimo 2 caracteres.')
     .required('Campo obrigatório.'),
   whatsapp: Yup.string()
+    .trim()
     .matches(
       /^\(?\d{2}\)?[\s-]?\d{4,5}[-]?\d{4}$/,
       'Número inválido, deve ser um telefone.'
     )
     .required('Campo obrigatório.'),
-  email: Yup.string().email('E-mail inválido.').required('Campo obrigatório.'),
+  email: Yup.string()
+    .trim()
+    .email('E-mail inválido.')
+    .required('Campo obrigatório.'),
   message: Yup.string()
-    .min(20, 'Descreva sua mensagem para que possamos te ajudar.')
+    .trim()
+    .min(10, 'Descreva sua mensagem para que possamos te ajudar.')
     .required('Campo obrigatório.'),
   terms: Yup.boolean()
     .oneOf([true], 'Você tem que aceitar os termos para proseguir.')
@@ -52,9 +59,9 @@ const ContactForm = memo(() => {
         onSubmit={(values, { setSubmitting, resetForm }) => {
           sendForm({
             subject: 'Contato Recebido - Site Reprotec',
-            text: `Olá, equipe Reprotec! \n
-          Recebemos um novo contato do site. Seguem os dados: \n`,
-            html: `<p><strong>Nome: </strong>${values.firstName}</p>
+            html: `<h1>Olá, equipe Reprotec!</h1>
+            <p>Recebemos um novo contato do site. Seguem os dados:</p>
+            <p><strong>Nome: </strong>${values.firstName}</p>
       <p><strong>Sobrenome: </strong>${values.lastName}</p>
       <p><strong>Link do WhatsApp: </strong> <a href="https://wa.me/55${values.whatsapp}">Click aqui para conversar no WhatsApp</a></p>
       <p><strong>Telefone: </strong>+55 ${values.whatsapp}</p>
