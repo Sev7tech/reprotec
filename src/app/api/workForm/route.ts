@@ -22,7 +22,6 @@ export async function POST(req: NextRequest) {
         <p><strong>Link do WhatsApp: </strong> <a href="https://wa.me/55${whatsApp}">Click aqui para conversar no WhatsApp</a></p>
         <p><strong>Telefone: </strong>+55 ${whatsApp}</p>
         <p><strong>E-mail: </strong>${email}</p>
-        <p><strong>currículo: </strong>${file}</p>
         <p>Atenciosamente,</p>
         <p>Equipe Reprotec.</p>
       `
