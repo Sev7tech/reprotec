@@ -74,15 +74,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt">
-      <body
-        className={`${barlow.variable} overflow-x-hidden bg-gray-100 antialiased`}
-      >
+      <body className={`${barlow.variable} bg-gray-100 antialiased`}>
         <Provider>
           <Header />
           {children}
           <Buttons.WhatsApp />
-          <Footer />
           <CookiePopup />
+          <Footer />
         </Provider>
       </body>
     </html>
