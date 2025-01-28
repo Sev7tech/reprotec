@@ -37,7 +37,6 @@ interface IOurDifferentials extends IImage {
 
 interface ISendForm {
   subject: string
-  text?: string
   html: string
   attachments?: Array<{
     filename: string
