@@ -24,7 +24,7 @@ const CustomLink = ({
 }: ICustomLink) => {
   return (
     <Link
-      className={`py-2 ${
+      className={`py-2 tracking-wide ${
         isFooterLink
           ? 'text-base font-normal text-slate-200 hover:text-sky-600 hover:brightness-105'
           : isTextWhite
