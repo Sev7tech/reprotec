@@ -9,8 +9,6 @@ import { Typography } from '../Typography'
 import { Buttons } from '../Buttons'
 import Popup from '../Popup'
 
-import sendForm from '@/utils/form.utils'
-
 const validationSchema = Yup.object({
   firstName: Yup.string()
     .trim()
@@ -56,33 +54,27 @@ const ContactForm = memo(() => {
           terms: false
         }}
         validationSchema={validationSchema}
-        onSubmit={(values, { setSubmitting, resetForm }) => {
-          sendForm({
-            subject: 'Contato Recebido - Site Reprotec',
-            html: `<h1>Olá, equipe Reprotec!</h1>
-            <p>Recebemos um novo contato do site. Seguem os dados:</p>
-            <p><strong>Nome: </strong>${values.firstName}</p>
-      <p><strong>Sobrenome: </strong>${values.lastName}</p>
-      <p><strong>Link do WhatsApp: </strong> <a href="https://wa.me/55${values.whatsapp}">Click aqui para conversar no WhatsApp</a></p>
-      <p><strong>Telefone: </strong>+55 ${values.whatsapp}</p>
-      <p><strong>E-mail: </strong>${values.email}</p>
-      <p><strong>Mensagem: </strong>${values.message}</p>
-      <p>Atenciosamente,</p>
-      <p>Equipe Reprotec.</p>`
-          })
-            .then(() => {
-              resetForm()
-              setSubmitting(false)
-              setIsPopupVisible(true)
+        onSubmit={async (values, { setSubmitting, resetForm }) => {
+          const formData = new FormData()
+
+          formData.append('firstName', values.firstName)
+          formData.append('lastName', values.lastName)
+          formData.append('whatsapp', values.whatsapp)
+          formData.append('email', values.email)
+          formData.append('message', values.message)
+
+          try {
+            await fetch('/api/contactForm', {
+              method: 'POST',
+              body: formData
             })
-            .catch(() => {
-              setISsubmitError(true)
-              setIsPopupVisible(true)
-            })
-            .finally(() => {
-              resetForm()
-              setSubmitting(false)
-            })
+          } catch {
+            setISsubmitError(true)
+          } finally {
+            setIsPopupVisible(true)
+            resetForm()
+            setSubmitting(false)
+          }
         }}
       >
         {({ handleSubmit, isSubmitting }) => (
