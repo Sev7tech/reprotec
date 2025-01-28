@@ -63,29 +63,18 @@ const WorkForm = memo(() => {
           formData.append('whatsapp', values.whatsapp)
           formData.append('email', values.email)
           formData.append('file', values.file!)
+
           try {
-            const response = await fetch('/api/workForm', {
+            await fetch('/api/workForm', {
               method: 'POST',
               body: formData
             })
-            const data = await response.json()
-
-            if (response.ok) {
-              alert(data)
-              resetForm()
-              setSubmitting(false)
-              setIsPopupVisible(true)
-            } else {
-              alert(data)
-              setISsubmitError(true)
-              setIsPopupVisible(true)
-            }
-          } catch (error) {
-            alert(error)
+          } catch {
             setISsubmitError(true)
-            setIsPopupVisible(true)
           } finally {
+            setIsPopupVisible(true)
             resetForm()
+            setIsPopupVisible(true)
             setSubmitting(false)
           }
         }}

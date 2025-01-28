@@ -4,6 +4,8 @@ import { useState } from 'react'
 
 import { Typography } from './Typography'
 
+import { CONFIG } from '@/config'
+
 interface IPopup {
   isContactForm: boolean
   isError: boolean
@@ -40,7 +42,7 @@ const Popup = ({ isContactForm, isError }: IPopup) => {
               Houve um problema ao enviar seus dados. Por favor, tente novamente
               mais tarde. Se o problema persistir, você também pode entrar em
               contato através do WhatsApp no número{' '}
-              <strong>(11) 9 9999-9999.</strong>
+              <strong>{CONFIG.contact.phone.children}.</strong>
             </Typography.Text>
             <Typography.Text>
               Atenciosamente,
