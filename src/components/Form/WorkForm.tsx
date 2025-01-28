@@ -9,22 +9,26 @@ import { Typography } from '../Typography'
 import { Buttons } from '../Buttons'
 import Popups from '../Popup'
 
-import sendForm from '@/utils/form.utils'
-
 const validationSchema = Yup.object({
   firstName: Yup.string()
+    .trim()
     .min(2, 'O nome deve ter no mínimo 2 caracteres.')
     .required('Campo obrigatório'),
   lastName: Yup.string()
+    .trim()
     .min(2, 'O sobrenome deve ter no mínimo 2 caracteres.')
     .required('Campo obrigatório.'),
   whatsapp: Yup.string()
+    .trim()
     .matches(
       /^\(?\d{2}\)?[\s-]?\d{4,5}[-]?\d{4}$/,
       'Número inválido, deve ser um telefone.'
     )
     .required('Campo obrigatório.'),
-  email: Yup.string().email('E-mail inválido.').required('Campo obrigatório.'),
+  email: Yup.string()
+    .trim()
+    .email('E-mail inválido.')
+    .required('Campo obrigatório.'),
   file: Yup.mixed<File>()
     .test('Size file', 'O arquivo pode ter no máximo 2MB.', (value) => {
       return value && value.size <= 2 * 1024 * 1024
@@ -51,33 +55,39 @@ const WorkForm = memo(() => {
           terms: false
         }}
         validationSchema={validationSchema}
-        onSubmit={(values, { setSubmitting, resetForm }) => {
-          sendForm({
-            subject: 'Candidatura Recebida - Site Reprotec',
-            text: `Olá, equipe Reprotec! \n
-          Recebemos uma nova candidatura de emprego no site. Seguem os dados: \n`,
-            html: `<p><strong>Nome: </strong>${values.firstName}</p>
-      <p><strong>Sobrenome: </strong>${values.lastName}</p>
-      <p><strong>Link do WhatsApp: </strong> <a href="https://wa.me/55${values.whatsapp}">Click aqui para conversar no WhatsApp</a></p>
-      <p><strong>Telefone: </strong>+55 ${values.whatsapp}</p>
-      <p><strong>E-mail: </strong>${values.email}</p>
-      <p><strong>currículo: </strong>${values.file}</p>
-      <p>Atenciosamente,</p>
-      <p>Equipe Reprotec.</p>`
-          })
-            .then(() => {
+        onSubmit={async (values, { setSubmitting, resetForm }) => {
+          const formData = new FormData()
+
+          formData.append('firstName', values.firstName)
+          formData.append('lastName', values.lastName)
+          formData.append('whatsapp', values.whatsapp)
+          formData.append('email', values.email)
+          formData.append('file', values.file!)
+          try {
+            const response = await fetch('/api/workForm', {
+              method: 'POST',
+              body: formData
+            })
+            const data = await response.json()
+
+            if (response.ok) {
+              alert(data)
               resetForm()
               setSubmitting(false)
               setIsPopupVisible(true)
-            })
-            .catch(() => {
+            } else {
+              alert(data)
               setISsubmitError(true)
               setIsPopupVisible(true)
-            })
-            .finally(() => {
-              resetForm()
-              setSubmitting(false)
-            })
+            }
+          } catch (error) {
+            alert(error)
+            setISsubmitError(true)
+            setIsPopupVisible(true)
+          } finally {
+            resetForm()
+            setSubmitting(false)
+          }
         }}
       >
         {({ handleSubmit, values, isSubmitting }) => (
