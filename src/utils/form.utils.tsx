@@ -1,25 +1,29 @@
 'use server'
 
 import nodemailer from 'nodemailer'
+import SMTPTransport from 'nodemailer/lib/smtp-transport'
 
 import { ISendForm } from '@/types'
 
 const transporter = nodemailer.createTransport({
-  service: 'Gmail',
+  // service: 'Gmail',
+  host: process.env.EMAIL_HOST,
+  port: process.env.EMAIL_PORT,
+  secure: process.env.NODE_ENV !== 'development',
   auth: {
-    user: 'testsapi765@gmail.com',
-    pass: 'itdqbxcacptemtfv'
+    user: process.env.EMAIL_USER,
+    pass: process.env.EMAIL_PASSWORD
   }
-})
+} as SMTPTransport.Options)
 
 async function sendForm(formData: ISendForm) {
-  const { subject, text, html } = formData
+  const { subject, html, attachments } = formData
   const info = await transporter.sendMail({
-    from: '"Site Reprotec:" <testsapi765@gmail.com>',
-    to: 'reprotec4@gmail.com',
+    from: `Site Reprotec: <${process.env.EMAIL_USER}>`,
+    to: process.env.EMAIL_RECEIVER,
     subject,
-    text,
-    html
+    html,
+    attachments: attachments || []
   })
 
   return info
