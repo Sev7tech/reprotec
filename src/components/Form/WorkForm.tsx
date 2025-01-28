@@ -65,22 +65,11 @@ const WorkForm = memo(() => {
           formData.append('file', values.file!)
 
           try {
-            const response = await fetch('/api/workForm', {
+            await fetch('/api/workForm', {
               method: 'POST',
               body: formData
             })
-
-            await response.json().catch((error) => {
-              alert(error)
-            })
-
-            if (!response.ok) {
-              const { status } = response
-              alert(status)
-              setISsubmitError(true)
-            }
-          } catch (error) {
-            alert(error)
+          } catch {
             setISsubmitError(true)
           } finally {
             setIsPopupVisible(true)
