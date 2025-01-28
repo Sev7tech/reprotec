@@ -69,7 +69,7 @@ export default function Home() {
           {servicesList.map((items) => (
             <li
               key={items.id}
-              data-aos={items.id! % 2 === 0 ? 'fade-up-left' : 'fade-up-right'}
+              data-aos="fade-up"
               data-aos-delay={getDelay(items.id!)}
             >
               <Cards.ServicesCard {...items} />
@@ -88,22 +88,20 @@ export default function Home() {
           $w={600}
           $h={400}
           className="rounded-lg"
-          data-aos="fade-up-right"
+          data-aos="fade-up"
         />
 
         <div className="gapCol16 w-full lg:w-[90%]">
-          <Typography.BlueTitle data-aos="fade-up-left">
-            Sobre
-          </Typography.BlueTitle>
+          <Typography.BlueTitle data-aos="fade-up">Sobre</Typography.BlueTitle>
 
-          <Typography.Text data-aos="fade-up-left">
+          <Typography.Text data-aos="fade-up">
             Na Reprotec, somos referência em serviços de reparo e manutenção de
             eletrodomésticos em Guarulhos e região. Oferecemos assistência
             especializada para uma ampla gama de produtos, incluindo
             refrigeradores, lavadoras, freezers, adegas e muito mais.
           </Typography.Text>
 
-          <Typography.Text data-aos="fade-up-left">
+          <Typography.Text data-aos="fade-up">
             Seja para residências ou estabelecimentos comerciais, a Reprotec é a
             escolha certa para soluções rápidas e de alta qualidade. Como
             assistência técnica autorizada das marcas Midea, Carrier, Springer,
@@ -112,7 +110,7 @@ export default function Home() {
             qualidade incomparável.
           </Typography.Text>
 
-          <Typography.Text data-aos="fade-up-left">
+          <Typography.Text data-aos="fade-up">
             Nosso compromisso vai além do reparo, buscamos constantemente a
             inovação e a satisfação total de nossos clientes. Para isso,
             investimos em parcerias com fornecedores de confiança, garantindo
@@ -121,7 +119,7 @@ export default function Home() {
             nossa maior prioridade.
           </Typography.Text>
 
-          <Typography.Text data-aos="fade-up-left">
+          <Typography.Text data-aos="fade-up">
             Assim como uma família reunida, acreditamos que eletrodomésticos em
             pleno funcionamento são essenciais para momentos inesquecíveis no
             seu lar. Conte com a Reprotec para manter sua casa funcionando com
@@ -173,7 +171,7 @@ export default function Home() {
       <Containers.Wrapper className="lg:flex-row">
         <div
           className="gapCol16 lg:mb-0 lg:gap-8"
-          data-aos="fade-up-right"
+          data-aos="fade-up"
           data-aos-delay={getDelay(2)}
         >
           <div>
@@ -190,7 +188,7 @@ export default function Home() {
 
         <div
           className="w-full md:mx-auto md:w-[90%] lg:w-[70%]"
-          data-aos="fade-up-left"
+          data-aos="fade-up"
           data-aos-delay={getDelay(3)}
         >
           <ContactFrom />

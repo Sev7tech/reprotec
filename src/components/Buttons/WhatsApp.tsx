@@ -11,7 +11,7 @@ export const WhatsApp = () => {
     <Link
       href={CONFIG.contact.phone.URL}
       title={buttonTitle}
-      className="fixed bottom-4 right-4 z-30 h-12 w-12 rounded-full bg-emerald-500 p-2"
+      className="fixed bottom-[2%] right-[2%] z-30 h-12 w-12 rounded-full bg-emerald-400 p-2 md:bottom-3 md:right-3"
       target="_blank"
     >
       <Picture

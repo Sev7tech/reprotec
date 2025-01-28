@@ -54,7 +54,10 @@ const Services = () => {
             />
           </div>
 
-          <Typography.Text data-aos="fade-up">
+          <Typography.Text
+            data-aos="fade-up"
+            className="w-95 text-black xl:w-full"
+          >
             Explore nossa ampla variedade de serviços de manutenção, reparo de
             eletrodomésticos. Somos especialistas autorizados pelas marcas
             líderes do mercado, entre elas Medea, Carrier, Springer, Comfee e
@@ -70,7 +73,7 @@ const Services = () => {
           {servicesCardList.map((items) => (
             <li
               key={items.id}
-              data-aos={items.id! % 2 === 0 ? 'fade-up-left' : 'fade-up-right'}
+              data-aos="fade-up"
               data-aos-delay={getDelay(items.id!)}
             >
               <Cards.ServicesCard {...items} isSeoTitle />

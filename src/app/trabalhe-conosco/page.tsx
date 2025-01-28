@@ -41,7 +41,7 @@ const WorkWithUs = () => {
       pageInfos={pageInfos}
     >
       <Containers.Wrapper className="form-pages">
-        <div className="form-container" data-aos="fade-up-right">
+        <div className="form-container" data-aos="fade-up">
           <WorkForm />
         </div>
         <div className="gapCol16 lg:w-[70%]">

@@ -40,7 +40,7 @@ const Contact = () => {
       pageInfos={pageInfos}
     >
       <Containers.Wrapper className="form-pages">
-        <div className="form-container" data-aos="fade-up-left">
+        <div className="form-container" data-aos="fade-up">
           <ContactForm />
         </div>
 
