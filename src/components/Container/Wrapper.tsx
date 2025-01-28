@@ -7,8 +7,10 @@ type IWrapper = {
 
 export const Wrapper = ({ children, className }: IWrapper) => {
   return (
-    <section className="custom-section mx-auto px-4">
-      <div className={`max-container flex flex-col gap-14 ${className}`}>
+    <section className="custom-section mx-auto">
+      <div
+        className={`max-container flex w-screen flex-col gap-14 px-4 ${className}`}
+      >
         {children}
       </div>
     </section>
